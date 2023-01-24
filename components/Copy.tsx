@@ -4,7 +4,7 @@ interface Values {
 	value: string;
 }
 
-const CopyButton = ({ value }: Values) => {
+const Copy = ({ value }: Values) => {
 	const [textToCopy, setTextToCopy] = useState(value);
 	const [copied, setCopied] = useState(false);
 
@@ -24,4 +24,4 @@ const CopyButton = ({ value }: Values) => {
 	);
 };
 
-export default CopyButton;
+export default Copy;

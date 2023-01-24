@@ -8,31 +8,43 @@ import {
 } from "react-icons/fa";
 import { SiDuolingo } from "react-icons/si";
 import { motion } from "framer-motion";
+import Copy from "./Copy";
 
-import CopyButton from "./CopyButton";
-type Props = {};
+type Props = {
+	theme: boolean;
+	setTheme: boolean | any;
+};
 
-export default function Header({}: Props) {
+export default function Header({ theme, setTheme }: Props) {
 	return (
-		<header className="w-full flex justify-center items-center">
-			<div className="w-full max-w-6xl flex justify-between items-center p-5">
-				<motion.ul
-					initial={{
-						x: -500,
-						opacity: 0,
-						scale: 0.5,
-					}}
-					animate={{
-						x: 0,
-						opacity: 1,
-						scale: 1,
-					}}
-					transition={{
-						duration: 1,
-					}}
-					className="flex flex-row items-center gap-4 text-2xl">
+		<motion.header
+			initial={{
+				y: -100,
+				opacity: 0,
+			}}
+			animate={{
+				y: 0,
+				opacity: 1,
+			}}
+			transition={{
+				duration: 1,
+			}}
+			className="w-full flex justify-center items-center p-3 fixed">
+			<div
+				className={`${
+					theme
+						? "w-full max-w-6xl flex justify-between items-center px-5 py-5  border border-black/10 rounded-md"
+						: "w-full max-w-6xl flex justify-between items-center px-5 py-5  border border-white/10 rounded-md"
+				}`}>
+				<ul
+					className={`${
+						theme
+							? "flex flex-row items-center gap-6 text-2xl text-black"
+							: "flex flex-row items-center gap-6 text-2xl text-white"
+					}`}>
 					<li>
 						<a
+							className="dark:text-white"
 							href="https://www.linkedin.com/in/code-sebastian-giraldo/"
 							rel="noreferrer"
 							target="_blank">
@@ -79,26 +91,12 @@ export default function Header({}: Props) {
 							<SiDuolingo />
 						</a>
 					</li>
-				</motion.ul>
-				<motion.div
-					initial={{
-						x: 500,
-						opacity: 0,
-						scale: 0.5,
-					}}
-					animate={{
-						x: 0,
-						opacity: 1,
-						scale: 1,
-					}}
-					transition={{
-						duration: 1,
-					}}
-					className="flex items-center gap-3">
-					<FaMailchimp className="text-2xl" />
-					<CopyButton value="joabgiraldo@gmail.com" />
-				</motion.div>
+				</ul>
+				<div className={`${theme ? "flex items-center gap-3 text-black" : "flex items-center gap-3 text-white"}`}>
+					<FaMailchimp  className="text-2xl" />
+					<Copy value="joabgiraldo@gmail.com" />
+				</div>
 			</div>
-		</header>
+		</motion.header>
 	);
 }
