@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { RxCopy } from "react-icons/rx";
+import { BsFileEarmarkCheckFill } from "react-icons/bs";
 
 interface Values {
 	value: string;
@@ -18,8 +20,9 @@ const Copy = ({ value }: Values) => {
 	};
 
 	return (
-		<button onClick={handleClick}>
+		<button className="flex items-center gap-2" onClick={handleClick}>
 			{copied ? "Copied!" : value}
+			{copied ? <BsFileEarmarkCheckFill /> : <RxCopy />}
 		</button>
 	);
 };

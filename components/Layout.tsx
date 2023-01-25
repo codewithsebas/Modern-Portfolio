@@ -1,26 +1,30 @@
 import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
 import { motion } from "framer-motion";
-import { useState } from "react";
-import Footer from "./Footer";
+
+// ESPECIFICA RUTA PARA ACTIVAR ICONO EN DONDE ESTAS EXACTAMENTE
+import { useRouter } from 'next/router'
 
 interface Props {
 	children: React.ReactNode;
+	theme: boolean
+	setTheme: boolean | any
 }
 
-const Layout = ({ children }: Props) => {
-	const [theme, setTheme] = useState(false);
+const Layout = ({ children, theme,setTheme }: Props) => {
+	const router = useRouter()
+	const {asPath} = router
 	return (
 		<div
 			className={`${
 				theme
-					? "h-screen bg-white dark:text-white/90 duration-200"
-					: "h-screen bg-[#18191a] dark:text-white/90 duration-200"
+					? "h-screen bg-gradient-to-b from-[#d8e2ec] to-white duration-200"
+					: "h-screen bg-gradient-to-b from-black to-[#111213] duration-200"
 			}`}>
-			<Header theme={theme} setTheme={setTheme} />
+			<Header theme={theme} />
 			<div className="w-full h-full pt-24 flex justify-center px-3 pb-3">
-				<div className="w-full max-w-6xl flex gap-4">
-					<Sidebar theme={theme} setTheme={setTheme} />
+				<div className="w-full max-w-6xl flex gap-6">
+					<Sidebar asPath={asPath} theme={theme} setTheme={setTheme} />
 					<motion.div
 						initial={{
 							y: 100,
@@ -35,11 +39,10 @@ const Layout = ({ children }: Props) => {
 						}}
 						className={`${
 							theme
-								? "z-20 flex flex-col justify-between w-full border border-black/10 rounded-md text-black"
-								: "z-20 flex flex-col justify-between w-full border border-white/10 rounded-md text-white"
+								? "-z-0 flex flex-col justify-between w-full rounded-md text-black/80"
+								: "-z-0 flex flex-col justify-between w-full rounded-md text-white"
 						}`}>
 						{children}
-						<Footer theme={theme} />
 					</motion.div>
 				</div>
 			</div>

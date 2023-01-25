@@ -7,15 +7,15 @@ import {
 	FaMailchimp,
 } from "react-icons/fa";
 import { SiDuolingo } from "react-icons/si";
+
 import { motion } from "framer-motion";
 import Copy from "./Copy";
 
 type Props = {
 	theme: boolean;
-	setTheme: boolean | any;
 };
 
-export default function Header({ theme, setTheme }: Props) {
+export default function Header({ theme }: Props) {
 	return (
 		<motion.header
 			initial={{
@@ -33,13 +33,13 @@ export default function Header({ theme, setTheme }: Props) {
 			<div
 				className={`${
 					theme
-						? "w-full max-w-6xl flex justify-between items-center px-5 py-5  border border-black/10 rounded-md"
-						: "w-full max-w-6xl flex justify-between items-center px-5 py-5  border border-white/10 rounded-md"
+						? "bg-white w-full max-w-6xl flex justify-between items-center px-5 py-5 rounded-md"
+						: "bg-[#111213] w-full max-w-6xl flex justify-between items-center px-5 py-5 rounded-md"
 				}`}>
 				<ul
 					className={`${
 						theme
-							? "flex flex-row items-center gap-6 text-2xl text-black"
+							? "flex flex-row items-center gap-6 text-2xl text-black/70"
 							: "flex flex-row items-center gap-6 text-2xl text-white"
 					}`}>
 					<li>

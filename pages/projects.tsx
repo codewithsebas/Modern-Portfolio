@@ -6,7 +6,7 @@ type Props = {
 	theme: boolean
 };
 
-const About = ({theme}: Props) => {
+const Projects = ({theme}: Props) => {
 	return (
 		<>
 			<Head>
@@ -99,4 +99,4 @@ const About = ({theme}: Props) => {
 	);
 };
 
-export default About;
+export default Projects;

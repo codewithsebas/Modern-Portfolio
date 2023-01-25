@@ -9,20 +9,17 @@ const Footer = ({ theme }: Props) => {
 		<footer
 			className={`${
 				theme
-					? "flex flex-col items-center gap-2 text-black border-t border-black/20 py-5"
-					: "flex flex-col items-center gap-2 text-white border-t border-white/20 py-5"
+					? "flex flex-col items-center gap-2 rounded-b-md text-black py-5"
+					: "flex flex-col items-center gap-2 rounded-b-md text-white py-5"
 			}`}>
 			<div className="flex gap-6">
-			<div>By Sebatian Giraldo</div>
+			<p>By Sebatian Giraldo</p>
 				<a
 					href="https://ko-fi.com/codewithsebas"
 					rel="noreferrer"
 					target="_blank">
 					Ko-Fi
 				</a>
-				<div>Nextjs</div>
-				<div>Github</div>
-				<div>Vercel</div>
 			</div>
 		</footer>
 	);
