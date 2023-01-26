@@ -18,12 +18,12 @@ const Layout = ({ children, theme,setTheme }: Props) => {
 		<div
 			className={`${
 				theme
-					? "h-screen bg-gradient-to-b from-[#d8e2ec] to-white duration-200"
-					: "h-screen bg-gradient-to-b from-black to-[#111213] duration-200"
+					? "h-screen bg-gradient-to-b from-[#e3eaf1] to-white"
+					: "h-screen bg-gradient-to-b from-black to-[#111213]"
 			}`}>
-			<Header theme={theme} />
-			<div className="w-full h-full pt-24 flex justify-center px-3 pb-3">
-				<div className="w-full max-w-6xl flex gap-6">
+			<Header asPath={asPath} theme={theme} setTheme={setTheme}  />
+			<div className="w-full h-full pt-[5.5rem] flex justify-center px-3 pb-3">
+				<div className="w-full max-w-6xl flex gap-5">
 					<Sidebar asPath={asPath} theme={theme} setTheme={setTheme} />
 					<motion.div
 						initial={{
@@ -39,8 +39,8 @@ const Layout = ({ children, theme,setTheme }: Props) => {
 						}}
 						className={`${
 							theme
-								? "-z-0 flex flex-col justify-between w-full rounded-md text-black/80"
-								: "-z-0 flex flex-col justify-between w-full rounded-md text-white"
+								? "flex flex-col justify-between w-full rounded-md text-black/80"
+								: "flex flex-col justify-between w-full rounded-md text-white"
 						}`}>
 						{children}
 					</motion.div>

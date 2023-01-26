@@ -1,12 +1,32 @@
+import { Lexend } from "@next/font/google";
 import Head from "next/head";
 import Image from "next/image";
 import React from "react";
 
-type Props = {
-	theme: boolean
-};
+import {
+	FaReact,
+	FaNodeJs,
+	FaHtml5,
+	FaCss3Alt,
+	FaGitAlt,
+	FaGithub,
+} from "react-icons/fa";
+import { TbBrandNextjs } from "react-icons/tb";
+import {
+	SiJavascript,
+	SiTypescript,
+	SiMongodb,
+	SiMysql,
+	SiTailwindcss,
+	SiBitbucket,
+	SiJirasoftware,
+} from "react-icons/si";
+import { Interface } from "@/interfaces/Interface";
+import Footer from "@/components/Footer";
 
-const About = ({theme}: Props) => {
+const lexend = Lexend({ subsets: ["latin"], weight: "800" });
+
+export default function About({ theme }: Interface) {
 	return (
 		<>
 			<Head>
@@ -16,87 +36,102 @@ const About = ({theme}: Props) => {
 				<link rel="icon" href="/favicon.svg" />
 			</Head>
 
-			<div className={`${
-				theme
-					? "w-full h-full overflow-auto bg-gradient-to-b from-white to-[#f1f7fd] rounded-md duration-200"
-					: "w-full h-full overflow-auto bg-gradient-to-b from-[#17181a] to-transparent rounded-md duration-200"
-			}`}>
+			<div
+				className={`${
+					theme
+						? "w-full h-full overflow-auto bg-gradient-to-b from-[#f6f6f7] to-white rounded-md"
+						: "w-full h-full overflow-auto bg-gradient-to-b from-[#17181a] to-transparent rounded-md"
+				}`}>
 				<div className="relative w-full max-h-80 object-cover">
+					{theme ? (
+						<Image
+							className="w-full max-h-52 object-cover opacity-30"
+							src="/arrow.jpg"
+							alt="Banner"
+							width={1000}
+							height={1000}
+							priority
+						/>
+					) : (
+						<Image
+							className="w-full max-h-52 object-cover opacity-10"
+							src="/backDark.jpg"
+							alt="Banner"
+							width={1000}
+							height={1000}
+							priority
+						/>
+					)}
 					<Image
-						className="w-full max-h-80 object-cover"
-						src="/banner.png"
-						alt="Banner"
-						width={1000}
-						height={1000}
-						priority
-						style={{ borderRadius: 5 }}
-					/>
-					<Image
-						className="absolute rounded-full z-20 border right-5 top-52"
+						className="absolute rounded-full z-20 border right-7 top-28"
 						src="/porfile.jpg"
 						alt="Banner"
 						width={200}
 						height={200}
 						priority
-						style={{ borderRadius: 100 }}
 					/>
 				</div>
-				<div className="w-full p-5 pt-6 flex flex-col gap-5">
-					<h1 className="text-5xl font-extrabold">About me!</h1>
-					<p className="text-xl font-medium">Welcome to my Dashboard Modern Portfolio!. ❤️</p>
+				<div className="w-full p-7 flex flex-col gap-5">
+					<h1
+						className={lexend.className}
+						style={{ fontSize: 50, fontWeight: 800, lineHeight: 1 }}>
+						About me!
+					</h1>
+					<p className="text-xl font-medium">
+						Read a little about me, I know you'll like it!. ❤️
+					</p>
 					<div className="relative">
 						<span className="absolute w-full h-0.5 bg-white/5"></span>
 						<span className="absolute w-full h-0.5 bg-black/5"></span>
 					</div>
-					<p className="text-xl pt-3 font-light">
-						My professional experience has been developed mainly in the area of
-						information technology. <br /> I have worked as a software developer
-						and I have also had the opportunity to lead projects and work teams.
+					<p className="text-xl pt-3 font-sans">
+						Hi! My name is Sebastian and I like to create things that live on
+						the internet. My interest in web development started in 2019, when I
+						decided to study a career that is in the tech industry. It turns out
+						that creating websites is the most fun thing in the world and it
+						taught me a lot about HTML and CSS. <br />
+						<br />
+						Currently, I'm developing my soft skills and my skills as a
+						developer. Currently, I'm mainly focused on creating accessible and
+						inclusive digital projects and experiences for other developers like
+						me and to make myself known to companies that want to take advantage
+						of my great knowledge and skills.
 						<br />
 						<br />
-						During my career I have acquired extensive experience in the
-						development of web and mobile applications, as well as in the
-						implementation of database solutions and systems integration. <br />
-						I am also knowledgeable in agile software development methodologies
-						and application development lifecycle management. In addition to my
-						technical expertise, I have also developed skills in the area of
-						communication and teamwork. <br />
-						
-						<br /> I am always willing to learn and adapt to new technologies
-						and methodologies, and I am sure that I can bring a lot of value to
-						any company where I have the opportunity to work. FullStack
-						developer, with experience in web application development using
-						tools such as React JS, Next JS, TypeScript, Tailwind, CSS, HTML and
-						CSS, JavaScript, PHP, Node JS, MongoDB, MySQL. <br />
+						I have also recently launched a web app similar to Spotify, building
+						a web application with the RAPIDAPI API using React and Nextjs.
+						These are some of the technologies I've been working with recently:
 						<br />
-						Also with experience designing nice user interfaces and knowledge in
-						Photoshop, Illustrator and Figma. Faithful believer that planning is
-						the first step to success, I like to have an order in the activities
-						of my daily and professional life, as this allowed me to establish a
-						step by step in each project, delegate functions to a team and get
-						satisfactory results for all.
 					</p>
 				</div>
 
-				<div className="w-full p-5 flex flex-col gap-5">
-				<h1 className="text-4xl font-semibold">Tools</h1>
-					<div className="relative">
-						<span className="absolute w-full h-0.5 bg-white/5"></span>
-						<span className="absolute w-full h-0.5 bg-black/5"></span>
+				<div className="w-full p-5 flex-wrap gap-5">
+					<div className="flex flex-col gap-5">
+						<h1 className="text-3xl leading-none">TECHNOLOGIES</h1>
+						<div className="relative">
+							<span className="absolute w-full h-0.5 bg-white/5"></span>
+							<span className="absolute w-full h-0.5 bg-black/5"></span>
+						</div>
+						<div className="flex gap-5 text-4xl">
+							<FaReact />
+							<TbBrandNextjs />
+							<SiJavascript />
+							<SiTypescript />
+							<FaNodeJs />
+							<FaHtml5 />
+							<FaCss3Alt />
+							<SiTailwindcss />
+							<SiMongodb />
+							<SiMysql />
+							<FaGitAlt />
+							<FaGithub />
+							<SiBitbucket />
+							<SiJirasoftware />
+						</div>
 					</div>
-					<h2 className="text-4xl font-bold">Software</h2>
-					<ul className="w-full text-lg font-extralight">
-						<li>This website is hosted on <a rel="noreferrer"
-							target="_blank" className="text-blue-500 text-xl" href="https://www.netlify.com/"> Netlify</a> and uses the <a rel="noreferrer"
-							target="_blank" className="text-blue-500 text-xl" href="https://vercel.com/">Vercel</a> framework</li>
-						<li>Coding : <a rel="noreferrer"
-							target="_blank" className="text-blue-500 text-xl" href="https://code.visualstudio.com/">Visual Studio Code</a> with <a rel="noreferrer"
-							target="_blank" className="text-blue-500 text-xl" href="https://marketplace.visualstudio.com/items?itemName=tobiasalthoff.atom-material-theme">Atom Material Theme</a></li>
-					</ul>
 				</div>
+				<Footer theme={theme} />
 			</div>
 		</>
 	);
-};
-
-export default About;
+}

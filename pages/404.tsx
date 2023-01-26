@@ -18,7 +18,7 @@ export default function Custom404({ theme }: Props) {
 				className={`${
 					theme
 						? "w-full h-full overflow-auto bg-gradient-to-b from-white to-[#f1f7fd] rounded-md duration-200"
-						: "w-full h-full overflow-auto bg-gradient-to-b from-[#17181a] to-transparent rounded-md duration-200"
+						: "w-full h-full overflow-auto bg-gradient-to-b from-[#121314] to-transparent rounded-md duration-200"
 				}`}>
 				<div
 					className={`${

@@ -10,12 +10,11 @@ import { SiDuolingo } from "react-icons/si";
 
 import { motion } from "framer-motion";
 import Copy from "./Copy";
+import Image from "next/image";
+import Link from "next/link";
+import { Interface } from "@/interfaces/Interface";
 
-type Props = {
-	theme: boolean;
-};
-
-export default function Header({ theme }: Props) {
+export default function Header({ asPath, theme }: Interface) {
 	return (
 		<motion.header
 			initial={{
@@ -29,12 +28,12 @@ export default function Header({ theme }: Props) {
 			transition={{
 				duration: 1,
 			}}
-			className="w-full flex justify-center items-center p-3 fixed">
+			className="w-full flex justify-center items-center pt-3 px-3 pb-2 fixed">
 			<div
 				className={`${
 					theme
-						? "bg-white w-full max-w-6xl flex justify-between items-center px-5 py-5 rounded-md"
-						: "bg-[#111213] w-full max-w-6xl flex justify-between items-center px-5 py-5 rounded-md"
+						? "bg-white w-full max-w-6xl flex justify-between items-center px-4 py-4 rounded-md"
+						: "bg-[#111213] w-full max-w-6xl flex justify-between items-center px-4 py-4 rounded-md"
 				}`}>
 				<ul
 					className={`${
@@ -42,9 +41,19 @@ export default function Header({ theme }: Props) {
 							? "flex flex-row items-center gap-6 text-2xl text-black/70"
 							: "flex flex-row items-center gap-6 text-2xl text-white"
 					}`}>
+					<li className="animate-pulse duration-200 hover:animate-none">
+						<Link href="/">
+							<Image src="/favicon.svg" alt="Logo" width={27} height={27} />
+						</Link>
+					</li>
 					<li>
 						<a
-							className="dark:text-white"
+							className={`${
+								theme
+									? "text-black/70 hover:text-black/80"
+									: "text-white/80 hover:text-white"
+							}
+						`}
 							href="https://www.linkedin.com/in/code-sebastian-giraldo/"
 							rel="noreferrer"
 							target="_blank">
@@ -53,6 +62,12 @@ export default function Header({ theme }: Props) {
 					</li>
 					<li>
 						<a
+						className={`${
+								theme
+									? "text-black/70 hover:text-black/80"
+									: "text-white/80 hover:text-white"
+							}
+						`}
 							href="https://github.com/codewithsebas"
 							rel="noreferrer"
 							target="_blank">
@@ -61,6 +76,12 @@ export default function Header({ theme }: Props) {
 					</li>
 					<li>
 						<a
+						className={`${
+								theme
+									? "text-black/70 hover:text-black/80"
+									: "text-white/80 hover:text-white"
+							}
+						`}
 							href="https://twitter.com/codewithsebas"
 							rel="noreferrer"
 							target="_blank">
@@ -69,6 +90,12 @@ export default function Header({ theme }: Props) {
 					</li>
 					<li>
 						<a
+						className={`${
+								theme
+									? "text-black/70 hover:text-black/80"
+									: "text-white/80 hover:text-white"
+							}
+						`}
 							href="https://dev.to/codewithsebas"
 							rel="noreferrer"
 							target="_blank">
@@ -77,6 +104,12 @@ export default function Header({ theme }: Props) {
 					</li>
 					<li>
 						<a
+						className={`${
+								theme
+									? "text-black/70 hover:text-black/80"
+									: "text-white/80 hover:text-white"
+							}
+						`}
 							href="https://dribbble.com/codewithsebas"
 							rel="noreferrer"
 							target="_blank">
@@ -85,6 +118,12 @@ export default function Header({ theme }: Props) {
 					</li>
 					<li>
 						<a
+						className={`${
+								theme
+									? "text-black/70 hover:text-black/80"
+									: "text-white/80 hover:text-white"
+							}
+						`}
 							href="https://www.duolingo.com/profile/codewithsebas"
 							rel="noreferrer"
 							target="_blank">
@@ -92,8 +131,13 @@ export default function Header({ theme }: Props) {
 						</a>
 					</li>
 				</ul>
-				<div className={`${theme ? "flex items-center gap-3 text-black" : "flex items-center gap-3 text-white"}`}>
-					<FaMailchimp  className="text-2xl" />
+				<div
+					className={`${
+						theme
+							? "flex items-center gap-3 text-black"
+							: "flex items-center gap-3 text-white"
+					}`}>
+					<FaMailchimp className="text-2xl" />
 					<Copy value="joabgiraldo@gmail.com" />
 				</div>
 			</div>

@@ -46,19 +46,19 @@ const Sidebar = ({ theme, setTheme, asPath }: Props) => {
 							? "flex flex-col items-center gap-5 text-black/50"
 							: "flex flex-col items-center gap-5 text-white/50"
 					}`}>
-					<li className="duration-200 cursor-pointer text-2xl group max-w-max relative flex items-center justify-center">
+					<li className="cursor-pointer text-2xl group max-w-max relative flex items-center justify-center">
 						<Link
 							href="/"
 							className={`${
 								!theme && asPath === "/"
-									? "duration-200 bg-white/10 text-white/90 hover:text-white rounded-md p-2"
-									: "duration-200 bg-black/10 text-black/70 hover:text-black rounded-md p-2"
+									? "bg-white/10 text-white/90 hover:text-white rounded-md p-2"
+									: "bg-black/10 text-black/70 hover:text-black/70 rounded-md p-2"
 									? asPath !== "/"
 										? theme
-											? "duration-200 hover:bg-black/10 hover:text-black rounded-md p-2"
-											: "duration-200 hover:bg-white/10 hover:text-white rounded-md p-2"
-										: "duration-200 bg-black/10 text-black/70 hover:text-black/80 rounded-md p-2"
-									: "duration-200 bg-white/10 text-white/70 hover:text-white/80 rounded-md p-2"
+											? "hover:bg-black/10 hover:text-black/70 rounded-md p-2"
+											: "hover:bg-white/10 hover:text-white rounded-md p-2"
+										: "bg-black/10 text-black/70 hover:text-black/70 rounded-md p-2"
+									: "bg-white/10 text-white/70 hover:text-white/80 rounded-md p-2"
 							}
 							`}>
 							<HiHome />
@@ -76,19 +76,19 @@ const Sidebar = ({ theme, setTheme, asPath }: Props) => {
 							</div>
 						</div>
 					</li>
-					<li className="duration-200 cursor-pointer text-2xl group max-w-max relative flex items-center justify-center">
+					<li className="cursor-pointer text-2xl group max-w-max relative flex items-center justify-center">
 						<Link
 							href="/about"
 							className={`${
 								!theme && asPath === "/about"
-									? "duration-200 bg-white/10 text-white/90 hover:text-white rounded-md p-2"
-									: "duration-200 bg-black/10 text-black/70 hover:text-black rounded-md p-2"
+									? "bg-white/10 text-white/90 hover:text-white rounded-md p-2"
+									: "bg-black/10 text-black/70 hover:text-black/70 rounded-md p-2"
 									? asPath !== "/about"
 										? theme
-											? "duration-200 hover:bg-black/10 hover:text-black rounded-md p-2"
-											: "duration-200 hover:bg-white/10 hover:text-white rounded-md p-2"
-										: "duration-200 bg-black/10 text-black/70 hover:text-black/80 rounded-md p-2"
-									: "duration-200 bg-white/10 text-white/70 hover:text-white/80 rounded-md p-2"
+											? "hover:bg-black/10 hover:text-black/70 rounded-md p-2"
+											: "hover:bg-white/10 hover:text-white rounded-md p-2"
+										: "bg-black/10 text-black/70 hover:text-black/70 rounded-md p-2"
+									: "bg-white/10 text-white/70 hover:text-white/80 rounded-md p-2"
 							}
 							`}>
 							<FaAddressBook />
@@ -107,19 +107,19 @@ const Sidebar = ({ theme, setTheme, asPath }: Props) => {
 						</div>
 					</li>
 
-					<li className="duration-200 cursor-pointer text-2xl group max-w-max relative flex items-center justify-center">
+					<li className="cursor-pointer text-2xl group max-w-max relative flex items-center justify-center">
 						<Link
 							href="/experience"
 							className={`${
 								!theme && asPath === "/experience"
-									? "duration-200 bg-white/10 text-white/90 hover:text-white rounded-md p-2"
-									: "duration-200 bg-black/10 text-black/70 hover:text-black rounded-md p-2"
+									? "bg-white/10 text-white/90 hover:text-white rounded-md p-2"
+									: "bg-black/10 text-black/70 hover:text-black/70 rounded-md p-2"
 									? asPath !== "/experience"
 										? theme
-											? "duration-200 hover:bg-black/10 hover:text-black rounded-md p-2"
-											: "duration-200 hover:bg-white/10 hover:text-white rounded-md p-2"
-										: "duration-200 bg-black/10 text-black/70 hover:text-black/80 rounded-md p-2"
-									: "duration-200 bg-white/10 text-white/70 hover:text-white/80 rounded-md p-2"
+											? "hover:bg-black/10 hover:text-black/70 rounded-md p-2"
+											: "hover:bg-white/10 hover:text-white rounded-md p-2"
+										: "bg-black/10 text-black/70 hover:text-black/80 rounded-md p-2"
+									: "bg-white/10 text-white/70 hover:text-white/80 rounded-md p-2"
 							}
 							`}>
 							<HiBriefcase />
@@ -138,19 +138,19 @@ const Sidebar = ({ theme, setTheme, asPath }: Props) => {
 						</div>
 					</li>
 
-					<li className="duration-200 cursor-pointer text-2xl group max-w-max relative flex items-center justify-center">
+					<li className="cursor-pointer text-2xl group max-w-max relative flex items-center justify-center">
 						<Link
 							href="/skills"
 							className={`${
 								!theme && asPath === "/skills"
-									? "duration-200 bg-white/10 text-white/90 hover:text-white rounded-md p-2"
-									: "duration-200 bg-black/10 text-black/70 hover:text-black rounded-md p-2"
+									? "bg-white/10 text-white/90 hover:text-white rounded-md p-2"
+									: "bg-black/10 text-black/70 hover:text-black/70 rounded-md p-2"
 									? asPath !== "/skills"
 										? theme
-											? "duration-200 hover:bg-black/10 hover:text-black rounded-md p-2"
-											: "duration-200 hover:bg-white/10 hover:text-white rounded-md p-2"
-										: "duration-200 bg-black/10 text-black/70 hover:text-black/80 rounded-md p-2"
-									: "duration-200 bg-white/10 text-white/70 hover:text-white/80 rounded-md p-2"
+											? "hover:bg-black/10 hover:text-black/70 rounded-md p-2"
+											: "hover:bg-white/10 hover:text-white rounded-md p-2"
+										: "bg-black/10 text-black/70 hover:text-black/80 rounded-md p-2"
+									: "bg-white/10 text-white/70 hover:text-white/80 rounded-md p-2"
 							}
 							`}>
 							<HiColorSwatch />
@@ -169,19 +169,19 @@ const Sidebar = ({ theme, setTheme, asPath }: Props) => {
 						</div>
 					</li>
 
-					<li className="duration-200 cursor-pointer text-2xl group max-w-max relative flex items-center justify-center">
+					<li className="cursor-pointer text-2xl group max-w-max relative flex items-center justify-center">
 						<Link
 							href="/projects"
 							className={`${
 								!theme && asPath === "/projects"
-									? "duration-200 bg-white/10 text-white/90 hover:text-white rounded-md p-2"
-									: "duration-200 bg-black/10 text-black/70 hover:text-black rounded-md p-2"
+									? "bg-white/10 text-white/90 hover:text-white rounded-md p-2"
+									: "bg-black/10 text-black/70 hover:text-black/70 rounded-md p-2"
 									? asPath !== "/projects"
 										? theme
-											? "duration-200 hover:bg-black/10 hover:text-black rounded-md p-2"
-											: "duration-200 hover:bg-white/10 hover:text-white rounded-md p-2"
-										: "duration-200 bg-black/10 text-black/70 hover:text-black/80 rounded-md p-2"
-									: "duration-200 bg-white/10 text-white/70 hover:text-white/80 rounded-md p-2"
+											? "hover:bg-black/10 hover:text-black/70 rounded-md p-2"
+											: "hover:bg-white/10 hover:text-white rounded-md p-2"
+										: "bg-black/10 text-black/70 hover:text-black/80 rounded-md p-2"
+									: "bg-white/10 text-white/70 hover:text-white/80 rounded-md p-2"
 							}
 							`}>
 							<HiFolderOpen />
@@ -200,19 +200,19 @@ const Sidebar = ({ theme, setTheme, asPath }: Props) => {
 						</div>
 					</li>
 
-					<li className="duration-200 cursor-pointer text-2xl group max-w-max relative flex items-center justify-center">
+					<li className="cursor-pointer text-2xl group max-w-max relative flex items-center justify-center">
 						<Link
 							href="/devs"
 							className={`${
 								!theme && asPath === "/devs"
-									? "duration-200 bg-white/10 text-white/90 hover:text-white rounded-md p-2"
-									: "duration-200 bg-black/10 text-black/70 hover:text-black rounded-md p-2"
+									? "bg-white/10 text-white/90 hover:text-white rounded-md p-2"
+									: "bg-black/10 text-black/70 hover:text-black/70 rounded-md p-2"
 									? asPath !== "/devs"
 										? theme
-											? "duration-200 hover:bg-black/10 hover:text-black rounded-md p-2"
-											: "duration-200 hover:bg-white/10 hover:text-white rounded-md p-2"
-										: "duration-200 bg-black/10 text-black/70 hover:text-black/80 rounded-md p-2"
-									: "duration-200 bg-white/10 text-white/70 hover:text-white/80 rounded-md p-2"
+											? "hover:bg-black/10 hover:text-black/70 rounded-md p-2"
+											: "hover:bg-white/10 hover:text-white rounded-md p-2"
+										: "bg-black/10 text-black/70 hover:text-black/80 rounded-md p-2"
+									: "bg-white/10 text-white/70 hover:text-white/80 rounded-md p-2"
 							}
 							`}>
 							<FaUsers />
@@ -231,19 +231,19 @@ const Sidebar = ({ theme, setTheme, asPath }: Props) => {
 						</div>
 					</li>
 
-					<li className="duration-200 cursor-pointer text-2xl group max-w-max relative flex items-center justify-center">
+					<li className="cursor-pointer text-2xl group max-w-max relative flex items-center justify-center">
 						<Link
 							href="/contact"
 							className={`${
 								!theme && asPath === "/contact"
-									? "duration-200 bg-white/10 text-white/90 hover:text-white rounded-md p-2"
-									: "duration-200 bg-black/10 text-black/70 hover:text-black rounded-md p-2"
+									? "bg-white/10 text-white/90 hover:text-white rounded-md p-2"
+									: "bg-black/10 text-black/70 hover:text-black/70 rounded-md p-2"
 									? asPath !== "/contact"
 										? theme
-											? "duration-200 hover:bg-black/10 hover:text-black rounded-md p-2"
-											: "duration-200 hover:bg-white/10 hover:text-white rounded-md p-2"
-										: "duration-200 bg-black/10 text-black/70 hover:text-black/80 rounded-md p-2"
-									: "duration-200 bg-white/10 text-white/70 hover:text-white/80 rounded-md p-2"
+											? "hover:bg-black/10 hover:text-black/70 rounded-md p-2"
+											: "hover:bg-white/10 hover:text-white rounded-md p-2"
+										: "bg-black/10 text-black/70 hover:text-black/80 rounded-md p-2"
+									: "bg-white/10 text-white/70 hover:text-white/80 rounded-md p-2"
 							}
 							`}>
 							<FaBook />
@@ -262,12 +262,17 @@ const Sidebar = ({ theme, setTheme, asPath }: Props) => {
 						</div>
 					</li>
 				</ul>
-				<div className="w-full relative flex items-center justify-center duration-200 cursor-pointer text-2xl group">
+				<div className="cursor-pointer text-2xl group max-w-max relative flex items-center justify-center">
 					<Theme theme={theme} setTheme={setTheme} />
-					<div className="group-hover:[transform:perspective(10px)] absolute bottom-0 -left-0.5 mb-7 origin-bottom transform rounded text-white opacity-0 transition-all duration-300 group-hover:opacity-100">
-						<div className="flex max-w-xs flex-col items-center">
-							<div className="rounded bg-white/80 border backdrop-blur-xl text-black p-2 text-xs text-center shadow-lg">
-								{theme ? "Dark" : "Light"}
+					<div className="group-hover:[transform:perspective(10px)] z-30 absolute -bottom-1 right-7 origin-top transform rounded text-white opacity-0 transition-all duration-300 group-hover:opacity-100 pointer-events-none">
+						<div className="flex max-w-xs flex-col items-center pointer-events-none">
+							<div
+								className={`${
+									theme
+										? "rounded bg-white/90 backdrop-blur-xl text-black/70 p-2 text-sm text-center shadow-lg pointer-events-none"
+										: "rounded bg-white/20 backdrop-blur-xl text-white/70 p-2 text-sm text-center shadow-lg pointer-events-none"
+								}`}>
+								{theme ? 'Dark' : 'Ligth'}
 							</div>
 						</div>
 					</div>

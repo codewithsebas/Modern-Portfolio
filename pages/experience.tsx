@@ -1,9 +1,31 @@
+import { Lexend } from "@next/font/google";
 import Head from "next/head";
+import Image from "next/image";
 import React from "react";
 
-type Props = {};
+import {
+	FaReact,
+	FaNodeJs,
+	FaHtml5,
+	FaCss3Alt,
+	FaGitAlt,
+	FaGithub,
+} from "react-icons/fa";
+import { TbBrandNextjs } from "react-icons/tb";
+import {
+	SiJavascript,
+	SiTypescript,
+	SiMongodb,
+	SiMysql,
+	SiTailwindcss,
+	SiBitbucket,
+	SiJirasoftware,
+} from "react-icons/si";
+import { Interface } from "@/interfaces/Interface";
 
-export default function Home(props: Props) {
+const lexend = Lexend({ subsets: ["latin"], weight: "800" });
+
+export default function Experience({ theme }: Interface) {
 	return (
 		<>
 			<Head>
@@ -13,31 +35,70 @@ export default function Home(props: Props) {
 				<link rel="icon" href="/favicon.svg" />
 			</Head>
 
-			<div className="w-full h-screen overflow-auto mb-5">
-				<div className="w-full p-5 pt-6 flex flex-col gap-5">
-					<h1 className="text-5xl font-extrabold">Experience!</h1>
+			<div
+				className={`${
+					theme
+						? "w-full h-full overflow-auto bg-gradient-to-b from-white to-[#f1f7fd] rounded-md duration-200"
+						: "w-full h-full overflow-auto bg-gradient-to-b from-[#17181a] to-transparent rounded-md duration-200"
+				}`}>
+				<div className="relative w-full max-h-80 object-cover">
+					<Image
+						className="w-full max-h-52 object-cover opacity-10"
+						src="/backDark.jpg"
+						alt="Banner"
+						width={1000}
+						height={1000}
+						priority
+					/>
+				</div>
+				<div className="w-full p-7 flex flex-col gap-5">
+					<h1
+						className={lexend.className}
+						style={{ fontSize: 50, fontWeight: 800, lineHeight: 1 }}>
+						My experience!
+					</h1>
 					<p className="text-xl font-medium">
-						Experienced specialist committed to providing exceptional service. <br/>
+						Read a little about me, I know you'll like it!. ❤️
+					</p>
+					<div className="relative">
+						<span className="absolute w-full h-0.5 bg-white/5"></span>
+						<span className="absolute w-full h-0.5 bg-black/5"></span>
+					</div>
+					<p className="text-xl pt-3 font-sans">
+						Experienced specialist committed to providing exceptional service.{" "}
+						<br />
 						Motivated, team player with strong organizational and interpersonal
-						skills. Always looking for new opportunities to improve my skills,
-						get recognized for my knowledge and values and take on additional
-						responsibilities and grow professionally!. ❤️
+						skills.
+						<br />
+						<br />
+						Always looking for new opportunities to improve my skills, get
+						recognized for my knowledge and values and take on additional
+						responsibilities and grow professionally
 					</p>
 				</div>
-				<div className="flex gap-3 justify-center p-5">
-					<div className="w-full flex flex-wrap gap-10">
-						<div className="w-full flex flex-col gap-5 border">
-							<div className="flex flex-col gap-3">
-								<h1 className="text-3xl font-semibold">UI/UX Designer</h1>
-								<p className="text-xl">Open Bootcamp — España</p>
-							</div>
-							<div>
-								<p className="font-thin">
-									Great experience as UI/UX Designer at Open WeekApps.
-									Collaboration of designs for personal projects with a great
-									community
-								</p>
-							</div>
+
+				<div className="w-full p-5 flex-wrap gap-5">
+					<div className="flex flex-col gap-5">
+						<h1 className="text-3xl leading-none">TECHNOLOGIES</h1>
+						<div className="relative">
+							<span className="absolute w-full h-0.5 bg-white/5"></span>
+							<span className="absolute w-full h-0.5 bg-black/5"></span>
+						</div>
+						<div className="flex gap-5 text-4xl">
+							<FaReact />
+							<TbBrandNextjs />
+							<SiJavascript />
+							<SiTypescript />
+							<FaNodeJs />
+							<FaHtml5 />
+							<FaCss3Alt />
+							<SiTailwindcss />
+							<SiMongodb />
+							<SiMysql />
+							<FaGitAlt />
+							<FaGithub />
+							<SiBitbucket />
+							<SiJirasoftware />
 						</div>
 					</div>
 				</div>

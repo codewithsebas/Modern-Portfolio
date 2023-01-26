@@ -24,30 +24,28 @@ export default function Home({ theme, setTheme }: Props) {
 			<div
 				className={`${
 					theme
-						? "w-full h-full flex flex-col justify-between overflow-auto bg-gradient-to-b from-white to-[#f1f7fd] rounded-md duration-200"
-						: "w-full h-full flex flex-col justify-between overflow-auto bg-gradient-to-b from-[#17181a] to-transparent rounded-md duration-200"
+						? "w-full h-full flex flex-col justify-between overflow-auto bg-gradient-to-b from-[#f6f6f7] to-white rounded-md"
+						: "w-full h-full flex flex-col justify-between overflow-auto bg-gradient-to-b from-[#17181a] to-transparent rounded-md"
 				}`}>
 				<div>
-					<div className="relative w-full max-h-80 object-cover">
+					<div className="relative w-full max-h-80">
 						{theme ? (
 							<Image
-								className="w-full max-h-80 object-cover"
-								src="/ligth.jpg"
+								className="max-h-80 object-cover opacity-90"
+								src="/back.jpg"
 								alt="Banner"
-								width={1000}
+								width={1076}
 								height={1000}
 								priority
-								style={{ borderRadius: 5 }}
 							/>
 						) : (
 							<Image
-								className="w-full max-h-80 object-cover"
-								src="/dark.png"
+								className="max-h-80 object-cover opacity-10"
+								src="/backDark.jpg"
 								alt="Banner"
-								width={1000}
+								width={1076}
 								height={1000}
 								priority
-								style={{ borderRadius: 5 }}
 							/>
 						)}
 						<div
@@ -59,26 +57,69 @@ export default function Home({ theme, setTheme }: Props) {
 							<div className="text-7xl text-white font-extrabold">
 								<h1 className={lexend.className}>WELCOME!</h1>
 							</div>
-							<p className="text-xl text-white font-extralight">
+							<p className="text-2xl text-white font-sans">
 								To my Modern Portfolio!
 							</p>
 						</div>
 					</div>
 
-					<div className="w-full p-5 flex flex-col gap-5 pt-10">
-						<h1 className="text-5xl font-bold">Hey, I'm Sebastian!</h1>
-						<p className="text-xl font-light">
-							Welcome to my Dashboard Modern Portfolio!. ❤️
-						</p>
+					<div className="w-full p-7 flex flex-col gap-5">
+						<p className="font-mono text-xl">Hi, my name is</p>
+						<h1
+							className={lexend.className}
+							style={{ fontSize: 50, lineHeight: 0.5 }}>
+							Sebastian Giraldo.
+						</h1>
+						<h1
+							className={lexend.className}
+							style={{ fontSize: 50, lineHeight: 1 }}>
+							I build things for the web.. ❤️
+						</h1>
 						<div className="relative">
 							<span className="absolute w-full left-0 right-0 h-0.5 bg-white/5"></span>
 							<span className="absolute w-full left-0 right-0 h-0.5 bg-black/5"></span>
 						</div>
-						<p className="text-xl pt-3 font-thin">
-							I am a software developer in Colombia. I do open source projects
-							and write about code, design and life. I like photography,
-							drawing, science fiction, reading and games.
+						<p className="text-xl font-sans">
+							I’m a software engineer specializing in building (and occasionally
+							designing) exceptional digital experiences. Currently, I’m focused
+							on building accessible, human-centered products at Upstatement.
 						</p>
+						<div className="w-full flex pt-5">
+							<div className="w-full flex gap-3">
+								<Image
+									className="rounded-md"
+									src="/pc1.jpg"
+									alt="PC1"
+									width={200}
+									height={200}
+								/>
+								<Image
+									className="rounded-md"
+									src="/pc2.jpg"
+									alt="PC2"
+									width={200}
+									height={200}
+								/>
+							</div>
+							<div className="w-full flex flex-col justify-center gap-10">
+								<h1
+									className={lexend.className}
+									style={{ fontSize: 50, lineHeight: 0.5 }}>
+									My work zone!.
+								</h1>
+								<p className="text-xl font-sans">
+									Experienced specialist committed to providing exceptional
+									service. <br />
+									<br />
+									Motivated, team player with strong organizational and
+									interpersonal skills.
+									<br />
+									Always looking for new opportunities to improve my skills, get
+									recognized for my knowledge and values and take on additional
+									responsibilities and grow professionally.
+								</p>
+							</div>
+						</div>
 					</div>
 				</div>
 

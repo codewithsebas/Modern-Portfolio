@@ -22,7 +22,7 @@ const Copy = ({ value }: Values) => {
 	return (
 		<button className="flex items-center gap-2" onClick={handleClick}>
 			{copied ? "Copied!" : value}
-			{copied ? <BsFileEarmarkCheckFill /> : <RxCopy />}
+			{copied ? <BsFileEarmarkCheckFill /> : <RxCopy className="animate-bounce" />}
 		</button>
 	);
 };
