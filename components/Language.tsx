@@ -1,22 +1,21 @@
 import { InterfaceTheme } from "@/interfaces/Interface";
-import { MdLightMode, MdNightlight } from "react-icons/md";
-
+import {IoLanguageOutline} from "react-icons/io5"
 // Do NOT use this! It will throw a hydration mismatch error.
-const Theme = ({ theme, setTheme }: InterfaceTheme) => {
+// { theme, language, setLanguage }: Interface
+const Language = ({theme}: InterfaceTheme) => {    
   return (
     <div className="absolute bottom-0 gap-2">
-      <div
-        onClick={() => setTheme(!theme)}
+      <button
         className={`${
           theme
             ? "text-black/70 cursor-pointer"
             : "text-white cursor-pointer"
         }`}
       >
-        {theme ? <MdNightlight /> : <MdLightMode />}
-      </div>
+        {theme ? <IoLanguageOutline /> : <IoLanguageOutline />}
+      </button>
     </div>
   );
 };
 
-export default Theme;
+export default Language;

@@ -40,7 +40,7 @@ export default function Custom404({ theme }: Props) {
                     : "duration-200 bg-white hover:bg-black/10 hover:text-white border border-black hover:border hover:border-white text-black font-bold py-2 px-4 rounded"
                 }`}
               >
-                Return
+                Home
               </Link>
             </div>
           </div>

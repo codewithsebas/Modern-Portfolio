@@ -3,16 +3,12 @@ import Image from "next/image";
 
 import { Lexend } from "@next/font/google";
 import Footer from "@/components/Footer";
+import { Interface } from "@/interfaces/Interface";
 
 // If loading a variable font, you don't need to specify the font weight
 const lexend = Lexend({ subsets: ["latin"], weight: "800" });
 
-type Props = {
-  theme: boolean;
-  setTheme: boolean | any;
-};
-
-export default function Home({ theme, setTheme }: Props) {
+export default function Home({ theme }: Interface) {
   return (
     <>
       <Head>
@@ -108,7 +104,7 @@ export default function Home({ theme, setTheme }: Props) {
               <div className="w-full flex flex-col justify-center gap-10">
                 <h1
                   className={lexend.className}
-                  style={{ fontSize: 50, lineHeight: 0.5 }}
+                  style={{ fontSize: 30, lineHeight: 0 }}
                 >
                   My work zone!.
                 </h1>

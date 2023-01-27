@@ -55,8 +55,8 @@ export default function About({ theme }: Interface) {
             />
           ) : (
             <Image
-              className="w-full max-h-52 object-cover opacity-10"
-              src="/backDark.jpg"
+              className="w-full max-h-52 object-cover opacity-10 sepia rotate-180"
+              src="/arrow.jpg"
               alt="Banner"
               width={1000}
               height={1000}
@@ -77,7 +77,7 @@ export default function About({ theme }: Interface) {
             className={lexend.className}
             style={{ fontSize: 50, fontWeight: 800, lineHeight: 1 }}
           >
-            About me!
+            About me
           </h1>
           <p className="text-xl font-medium">
             Read a little about me, I know you'll like it!. ❤️
@@ -114,22 +114,22 @@ export default function About({ theme }: Interface) {
               <span className="absolute w-full h-0.5 bg-white/5"></span>
               <span className="absolute w-full h-0.5 bg-black/5"></span>
             </div>
-            <div className="flex gap-5 text-4xl">
-              <FaReact />
-              <TbBrandNextjs />
-              <SiJavascript />
-              <SiTypescript />
-              <FaNodeJs />
-              <FaHtml5 />
-              <FaCss3Alt />
-              <SiTailwindcss />
-              <SiMongodb />
-              <SiMysql />
-              <FaGitAlt />
-              <FaGithub />
-              <SiBitbucket />
-              <SiJirasoftware />
-            </div>
+            <div className="flex flex-wrap gap-5 text-4xl">
+							<FaReact className="cursor-pointer hover:text-blue-300" />
+							<TbBrandNextjs className="cursor-pointer hover:text-slate-300" />
+							<SiJavascript className="cursor-pointer hover:text-yellow-400" />
+							<SiTypescript className="cursor-pointer hover:text-blue-500" />
+							<FaNodeJs className="cursor-pointer hover:text-green-500" />
+							<FaHtml5 className="cursor-pointer hover:text-orange-400" />
+							<FaCss3Alt className="cursor-pointer hover:text-blue-300" />
+							<SiTailwindcss className="cursor-pointer hover:text-blue-300" />
+							<SiMongodb className="cursor-pointer hover:text-green-500" />
+							<SiMysql className="cursor-pointer hover:text-blue-300" />
+							<FaGitAlt className="cursor-pointer hover:text-orange-400" />
+							<FaGithub className="cursor-pointer hover:text-slate-300" />
+							<SiBitbucket className="cursor-pointer hover:text-blue-500" />
+							<SiJirasoftware className="cursor-pointer hover:text-blue-300" />
+						</div>
           </div>
         </div>
         <Footer theme={theme} />
