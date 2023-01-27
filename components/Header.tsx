@@ -136,7 +136,7 @@ export default function Header({ theme, setTheme}: InterfaceTheme) {
 					<div
 						className={`${
 							theme
-								? "flex items-center gap-3 text-black"
+								? "flex items-center gap-3 text-black/70"
 								: "flex items-center gap-3 text-white"
 						}`}>
 						<FaMailchimp className="text-2xl" />

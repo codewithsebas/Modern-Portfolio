@@ -21,13 +21,13 @@ import {
 	SiBitbucket,
 	SiJirasoftware,
 } from "react-icons/si";
-import { Interface } from "@/interfaces/Interface";
+import { InterfaceTheme } from "@/interfaces/Interface";
 import Footer from "@/components/Footer";
 
 const lexend = Lexend({ subsets: ["latin"], weight: "800" });
 import { ExperiencesData } from "@/utils/experiences";
 
-export default function Experience({ theme }: Interface) {
+export default function Experience({ theme, setTheme }: InterfaceTheme) {
 	return (
 		<>
 			<Head>
@@ -158,7 +158,7 @@ export default function Experience({ theme }: Interface) {
 						)}
 					</div>
 				</div>
-				<Footer theme={theme} />
+				<Footer theme={theme} setTheme={setTheme} />
 			</div>
 		</>
 	);

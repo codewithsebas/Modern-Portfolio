@@ -21,12 +21,12 @@ import {
   SiBitbucket,
   SiJirasoftware,
 } from "react-icons/si";
-import { Interface } from "@/interfaces/Interface";
 import Footer from "@/components/Footer";
+import { InterfaceTheme } from "@/interfaces/Interface";
 
 const lexend = Lexend({ subsets: ["latin"], weight: "800" });
 
-export default function About({ theme }: Interface) {
+export default function About({ theme, setTheme }: InterfaceTheme) {
   return (
     <>
       <Head>
@@ -132,7 +132,7 @@ export default function About({ theme }: Interface) {
 						</div>
           </div>
         </div>
-        <Footer theme={theme} />
+        <Footer theme={theme} setTheme={setTheme} />
       </div>
     </>
   );

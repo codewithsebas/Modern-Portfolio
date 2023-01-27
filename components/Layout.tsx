@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 // ESPECIFICA RUTA PARA ACTIVAR ICONO EN DONDE ESTAS EXACTAMENTE
 import { useRouter } from "next/router";
 
-const Layout = ({ children, theme, setTheme }: InterfaceLayout) => {
+const Layout = ({ children, theme, setTheme, lang, setLang }: InterfaceLayout) => {
 	const router = useRouter();
 	const { asPath } = router;
 	return (
@@ -18,8 +18,8 @@ const Layout = ({ children, theme, setTheme }: InterfaceLayout) => {
 			}`}>
 			<Header theme={theme} setTheme={setTheme} />
 			<div className="w-full h-full pt-[5.5rem] flex justify-center px-3 pb-3">
-				<div className="w-full max-w-6xl flex gap-5 rounded-md">
-					<Sidebar asPath={asPath} theme={theme} setTheme={setTheme} />
+				<div className="w-full max-w-6xl flex gap-4 rounded-md">
+					<Sidebar asPath={asPath} theme={theme} setTheme={setTheme} lang={lang} setLang={setLang} />
 					<motion.div
 						initial={{
 							y: 100,

@@ -5,12 +5,10 @@ import { useState } from "react";
 
 export default function App({ Component, pageProps }: AppProps) {
 	const [theme, setTheme] = useState(true);
-	const [language, setLanguage] = useState(false);
+	const [lang, setLang] = useState(true);
 	return (
-		<Layout
-			theme={theme}
-			setTheme={setTheme}>
-			<Component theme={theme} language {...pageProps} />
+		<Layout theme={theme} setTheme={setTheme} lang={lang} setLang={setLang}>
+			<Component theme={theme} lang={lang} setTheme={setTheme} {...pageProps} />
 		</Layout>
 	);
 }

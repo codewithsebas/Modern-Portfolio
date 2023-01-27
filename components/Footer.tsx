@@ -3,9 +3,9 @@ import { Lexend } from "@next/font/google";
 import { BsPaypal } from "react-icons/bs";
 import {SiKofi} from "react-icons/si"
 
-const lexend = Lexend({ subsets: ["latin"], weight: "800" });
+const font = Lexend({ subsets: ["latin"], weight: "800" });
 
-const Footer = ({ theme }: InterfaceTheme) => {
+const Footer = ({ theme, setTheme }: InterfaceTheme) => {
 	return (
 		<footer
 			className={`${
@@ -23,11 +23,11 @@ const Footer = ({ theme }: InterfaceTheme) => {
 					href="https://www.linkedin.com/in/code-sebastian-giraldo/"
 					rel="noreferrer"
 					target="_blank"
-					className={lexend.className}>
+					className={font.className}>
 					By Sebatian Giraldo
 				</a>
 				<a
-					className={lexend.className}
+					className={font.className}
 					href="https://ko-fi.com/codewithsebas"
 					rel="noreferrer"
 					target="_blank">
