@@ -42,41 +42,43 @@ const Sidebar = ({
 							? "flex flex-col items-center gap-5 text-black/50"
 							: "flex flex-col items-center gap-5 text-white/50"
 					}`}>
-					{Navbar.map(({ id, href, icon, name, description }) => (
-						<li
-							key={id}
-							className="cursor-pointer text-2xl group max-w-max relative flex items-center justify-center">
-							<Link
-							aria-label={description}
-								href={href}
-								className={`${
-									!theme && asPath === href
-										? "bg-white/10 text-white/90 hover:text-white rounded-md p-2"
-										: "bg-black/10 text-black/70 hover:text-black/70 rounded-md p-2"
-										? asPath !== href
-											? theme
-												? "hover:bg-black/10 hover:text-black/70 rounded-md p-2"
-												: "hover:bg-white/10 hover:text-white rounded-md p-2"
+					{Navbar.map(
+						({ id, href, icon, name, description, nameE, descriptionE }) => (
+							<li
+								key={id}
+								className="cursor-pointer text-2xl group max-w-max relative flex items-center justify-center">
+								<Link
+									aria-label={lang ? description : descriptionE}
+									href={href}
+									className={`${
+										!theme && asPath === href
+											? "bg-white/10 text-white/90 hover:text-white rounded-md p-2"
 											: "bg-black/10 text-black/70 hover:text-black/70 rounded-md p-2"
-										: "bg-white/10 text-white/70 hover:text-white/80 rounded-md p-2"
-								}
+											? asPath !== href
+												? theme
+													? "hover:bg-black/10 hover:text-black/70 rounded-md p-2"
+													: "hover:bg-white/10 hover:text-white rounded-md p-2"
+												: "bg-black/10 text-black/70 hover:text-black/70 rounded-md p-2"
+											: "bg-white/10 text-white/70 hover:text-white/80 rounded-md p-2"
+									}
 								`}>
-								{icon}
-							</Link>
-							<div className="group-hover:[transform:perspective(10px)] z-30 absolute top-[1.5px] right-[3.2rem] origin-top transform rounded text-white opacity-0 transition-all duration-300 group-hover:opacity-100 pointer-events-none">
-								<div className="flex max-w-xs flex-col items-center pointer-events-none">
-									<div
-										className={`${
-											theme
-												? "rounded bg-white/90 backdrop-blur-xl text-black/70 p-2 text-sm text-center shadow-lg pointer-events-none"
-												: "rounded bg-white/20 backdrop-blur-xl text-white/70 p-2 text-sm text-center shadow-lg pointer-events-none"
-										}`}>
-										{name}
+									{icon}
+								</Link>
+								<div className="group-hover:[transform:perspective(10px)] z-30 absolute top-[1.5px] right-[3.2rem] origin-top transform rounded text-white opacity-0 transition-all duration-300 group-hover:opacity-100 pointer-events-none">
+									<div className="flex max-w-xs flex-col items-center pointer-events-none">
+										<div
+											className={`${
+												theme
+													? "rounded bg-white/90 backdrop-blur-xl text-black/70 p-2 text-sm text-center shadow-lg pointer-events-none"
+													: "rounded bg-white/20 backdrop-blur-xl text-white/70 p-2 text-sm text-center shadow-lg pointer-events-none"
+											}`}>
+											{lang ? name : nameE}
+										</div>
 									</div>
 								</div>
-							</div>
-						</li>
-					))}
+							</li>
+						)
+					)}
 				</ul>
 				<div className="w-full flex flex-col items-center gap-12">
 					<div className="w-full cursor-pointer text-2xl group max-w-max relative flex items-center justify-center">
@@ -123,7 +125,13 @@ const Sidebar = ({
 											? "rounded bg-white/90 backdrop-blur-xl text-black/70 p-2 text-sm text-center shadow-lg pointer-events-none"
 											: "rounded bg-white/20 backdrop-blur-xl text-white/70 p-2 text-sm text-center shadow-lg pointer-events-none"
 									}`}>
-									{theme ? "Dark" : "Ligth"}
+									{lang
+										? theme
+											? "Dark"
+											: "Ligth"
+										: theme
+										? "Oscuro"
+										: "Claro"}
 								</div>
 							</div>
 						</div>

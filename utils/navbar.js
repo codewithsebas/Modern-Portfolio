@@ -13,6 +13,8 @@ export const Navbar = [
 		icon: <HiHome />,
         name: "Home",
 		description: "Home",
+		nameE: "Inicio",
+		descriptionE: "Inicio",
 	},
     {
 		id: 2,
@@ -20,6 +22,8 @@ export const Navbar = [
 		icon: <FaAddressBook />,
         name: "About",
 		description: "About",
+		nameE: "Sobre",
+		descriptionE: "Sobre mi",
 	},
     {
 		id: 3,
@@ -27,6 +31,8 @@ export const Navbar = [
 		icon: <HiBriefcase />,
         name: "Experience",
 		description: "Experience",
+		nameE: "Experiencia",
+		descriptionE: "Experiencia",
 	},
     {
 		id: 4,
@@ -34,6 +40,8 @@ export const Navbar = [
 		icon: <HiColorSwatch />,
         name: "Skills",
 		description: "Skills",
+		nameE: "Habilidades",
+		descriptionE: "Habilidades",
 	},
     {
 		id: 5,
@@ -41,6 +49,8 @@ export const Navbar = [
 		icon: <HiFolderOpen />,
         name: "Projects",
 		description: "Projects",
+		nameE: "Proyectos",
+		descriptionE: "Proyectos",
 	},
     {
 		id: 6,
@@ -48,6 +58,8 @@ export const Navbar = [
 		icon: <FaUsers />,
         name: "Networking",
 		description: "Networking",
+		nameE: "Red",
+		descriptionE: "Red",
 	},
     {
 		id: 7,
@@ -55,5 +67,7 @@ export const Navbar = [
 		icon: <FaBook />,
         name: "Contact",
 		description: "Contact",
+		nameE: "Contacto",
+		descriptionE: "Contacto",
 	},
 ];
