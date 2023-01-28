@@ -4,10 +4,10 @@ import { BsFileEarmarkPdfFill, BsFileEarmarkFontFill } from "react-icons/bs";
 const Cv = ({ theme }: InterfaceTheme) => {
 	return (
 		<div className="flex gap-1 z-50">
-			<a href="/download/CV.pdf"
+			<a href="/download/Presentation.pdf"
 				target="_blank"
 				rel="noopener noreferrer"
-				download="CV_SebastianGiraldo.pdf" className="flex items-center gap-2 relative group">
+				download="Presentation.pdf" className="flex items-center gap-2 relative group">
 				<BsFileEarmarkFontFill
 					className={`${
 						theme

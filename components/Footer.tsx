@@ -1,11 +1,11 @@
-import { InterfaceTheme } from "@/interfaces/Interface";
+import { InterfaceThemeLanguage } from "@/interfaces/Interface";
 import { Lexend } from "@next/font/google";
 import { BsPaypal } from "react-icons/bs";
 import {SiKofi} from "react-icons/si"
 
 const font = Lexend({ subsets: ["latin"], weight: "800" });
 
-const Footer = ({ theme, setTheme }: InterfaceTheme) => {
+const Footer = ({ theme, setTheme, lang }: InterfaceThemeLanguage) => {
 	return (
 		<footer
 			className={`${
@@ -20,6 +20,7 @@ const Footer = ({ theme, setTheme }: InterfaceTheme) => {
 						: "flex items-center gap-3 text-white/20 duration-200"
 				}`}>
 				<a
+				aria-label="Sebastián Giraldo"
 					href="https://www.linkedin.com/in/code-sebastian-giraldo/"
 					rel="noreferrer"
 					target="_blank"
@@ -27,6 +28,7 @@ const Footer = ({ theme, setTheme }: InterfaceTheme) => {
 					By Sebatian Giraldo
 				</a>
 				<a
+				aria-label="Ko Fi"
 					className={font.className}
 					href="https://ko-fi.com/codewithsebas"
 					rel="noreferrer"
@@ -34,6 +36,7 @@ const Footer = ({ theme, setTheme }: InterfaceTheme) => {
 					<SiKofi />
 				</a>
 				<a
+				aria-label="Paypal"
 					rel="noreferrer"
 					target="_blank"
 					href="https://paypal.me/codewithsebas?country.x=CO&locale.x=es_XC">

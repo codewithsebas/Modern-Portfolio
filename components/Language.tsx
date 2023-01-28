@@ -6,6 +6,7 @@ const Language = ({theme, setTheme, lang, setLang}: InterfaceThemeLanguage) => {
   return (
     <div className="absolute bottom-0 gap-2">
       <button
+      aria-label="Idioma"
       onClick={() => setLang(!lang)}
         className={`${
           theme

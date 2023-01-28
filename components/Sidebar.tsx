@@ -13,7 +13,7 @@ const Sidebar = ({
 	setLang,
 }: InterfaceThemePath) => {
 	return (
-		<motion.div
+		<motion.nav
 			initial={{
 				x: -100,
 				opacity: 0,
@@ -42,11 +42,12 @@ const Sidebar = ({
 							? "flex flex-col items-center gap-5 text-black/50"
 							: "flex flex-col items-center gap-5 text-white/50"
 					}`}>
-					{Navbar.map(({ id, href, icon, name }) => (
+					{Navbar.map(({ id, href, icon, name, description }) => (
 						<li
 							key={id}
 							className="cursor-pointer text-2xl group max-w-max relative flex items-center justify-center">
 							<Link
+							aria-label={description}
 								href={href}
 								className={`${
 									!theme && asPath === href
@@ -129,7 +130,7 @@ const Sidebar = ({
 					</div>
 				</div>
 			</div>
-		</motion.div>
+		</motion.nav>
 	);
 };
 

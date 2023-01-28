@@ -43,12 +43,13 @@ export default function Header({ theme, setTheme}: InterfaceTheme) {
 							: "flex flex-row items-center gap-6 text-2xl text-white"
 					}`}>
 					<li className="animate-pulse duration-200 hover:animate-none">
-						<Link href="/">
+						<Link href="/" aria-label="Pagina inicial">
 							<AiOutlineFire />
 						</Link>
 					</li>
 					<li>
 						<a
+						aria-label="LinkedIn"
 							className={`${
 								theme
 									? "text-black/70 hover:text-black/80"
@@ -63,6 +64,7 @@ export default function Header({ theme, setTheme}: InterfaceTheme) {
 					</li>
 					<li>
 						<a
+						aria-label="Github"
 							className={`${
 								theme
 									? "text-black/70 hover:text-black/80"
@@ -77,6 +79,7 @@ export default function Header({ theme, setTheme}: InterfaceTheme) {
 					</li>
 					<li>
 						<a
+						aria-label="Twitter"
 							className={`${
 								theme
 									? "text-black/70 hover:text-black/80"
@@ -91,6 +94,7 @@ export default function Header({ theme, setTheme}: InterfaceTheme) {
 					</li>
 					<li>
 						<a
+						aria-label="Dev"
 							className={`${
 								theme
 									? "text-black/70 hover:text-black/80"
@@ -105,6 +109,7 @@ export default function Header({ theme, setTheme}: InterfaceTheme) {
 					</li>
 					<li>
 						<a
+						aria-label="Dribbble"
 							className={`${
 								theme
 									? "text-black/70 hover:text-black/80"
@@ -119,6 +124,7 @@ export default function Header({ theme, setTheme}: InterfaceTheme) {
 					</li>
 					<li>
 						<a
+						aria-label="Duolingo"
 							className={`${
 								theme
 									? "text-black/70 hover:text-black/80"
