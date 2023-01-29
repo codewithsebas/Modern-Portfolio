@@ -12,10 +12,15 @@ import { AiOutlineFire } from "react-icons/ai";
 import { motion } from "framer-motion";
 import Copy from "./Copy";
 import Link from "next/link";
-import { InterfaceTheme } from "@/interfaces/Interface";
+import { InterfaceThemeLanguage } from "@/interfaces/Interface";
 import Cv from "./Cv";
 
-export default function Header({ theme, setTheme}: InterfaceTheme) {
+export default function Header({
+	theme,
+	setTheme,
+	lang,
+	setLang,
+}: InterfaceThemeLanguage) {
 	return (
 		<motion.header
 			initial={{
@@ -29,12 +34,12 @@ export default function Header({ theme, setTheme}: InterfaceTheme) {
 			transition={{
 				duration: 1,
 			}}
-			className="w-full flex justify-center items-center pt-3 px-3 pb-2 fixed">
+			className="w-full flex justify-center items-center pt-3 px-3 pb-2 fixed ">
 			<div
 				className={`${
 					theme
-						? "bg-white w-full max-w-6xl flex justify-between items-center px-4 py-4 rounded-md"
-						: "bg-[#111213] w-full max-w-6xl flex justify-between items-center px-4 py-4 rounded-md"
+						? "bg-white w-full max-w-4xl 2xl:max-w-6xl flex justify-between items-center px-4 py-3 rounded-md"
+						: "bg-neutral-800/20 w-full max-w-4xl 2xl:max-w-6xl flex justify-between items-center px-4 py-3 rounded-md" 
 				}`}>
 				<ul
 					className={`${
@@ -49,7 +54,7 @@ export default function Header({ theme, setTheme}: InterfaceTheme) {
 					</li>
 					<li>
 						<a
-						aria-label="LinkedIn"
+							aria-label="LinkedIn"
 							className={`${
 								theme
 									? "text-black/70 hover:text-black/80"
@@ -64,7 +69,7 @@ export default function Header({ theme, setTheme}: InterfaceTheme) {
 					</li>
 					<li>
 						<a
-						aria-label="Github"
+							aria-label="Github"
 							className={`${
 								theme
 									? "text-black/70 hover:text-black/80"
@@ -79,7 +84,7 @@ export default function Header({ theme, setTheme}: InterfaceTheme) {
 					</li>
 					<li>
 						<a
-						aria-label="Twitter"
+							aria-label="Twitter"
 							className={`${
 								theme
 									? "text-black/70 hover:text-black/80"
@@ -94,7 +99,7 @@ export default function Header({ theme, setTheme}: InterfaceTheme) {
 					</li>
 					<li>
 						<a
-						aria-label="Dev"
+							aria-label="Dev"
 							className={`${
 								theme
 									? "text-black/70 hover:text-black/80"
@@ -109,7 +114,7 @@ export default function Header({ theme, setTheme}: InterfaceTheme) {
 					</li>
 					<li>
 						<a
-						aria-label="Dribbble"
+							aria-label="Dribbble"
 							className={`${
 								theme
 									? "text-black/70 hover:text-black/80"
@@ -124,7 +129,7 @@ export default function Header({ theme, setTheme}: InterfaceTheme) {
 					</li>
 					<li>
 						<a
-						aria-label="Duolingo"
+							aria-label="Duolingo"
 							className={`${
 								theme
 									? "text-black/70 hover:text-black/80"
@@ -149,7 +154,7 @@ export default function Header({ theme, setTheme}: InterfaceTheme) {
 						<Copy value="joabgiraldo@gmail.com" />
 					</div>
 					<p className={`${theme ? "text-black" : "text-white"}`}>|</p>
-					<Cv theme={theme} setTheme={setTheme} />
+					<Cv theme={theme} setTheme={setTheme} lang={lang} setLang={setLang} />
 				</div>
 			</div>
 		</motion.header>

@@ -46,10 +46,10 @@ export default function About({
 			<div
 				className={`${
 					theme
-						? "w-full h-full overflow-auto bg-gradient-to-b from-[#f6f6f7] to-white rounded-md"
-						: "w-full h-full overflow-auto bg-gradient-to-b from-[#17181a] to-transparent rounded-md"
+						? "w-full h-full overflow-auto bg-gradient-to-b from-white to-transparent rounded-md backdrop-blur-3xl"
+						: "w-full h-full overflow-auto bg-gradient-to-b from-[#17181a] to-transparent rounded-md backdrop-blur-3xl"
 				}`}>
-				<div className="relative w-full max-h-80 object-cover">
+				<div className="relative w-full max-h-80">
 					{theme ? (
 						<Image
 							className="w-full max-h-52 object-cover opacity-30"
@@ -69,51 +69,76 @@ export default function About({
 							priority
 						/>
 					)}
-					<Image
-						className="absolute rounded-full z-20 border right-7 top-28"
-						src="/porfile.jpg"
-						alt="Banner"
-						width={200}
-						height={200}
-						priority
-					/>
 				</div>
-				<div className="w-full p-7 flex flex-col gap-5">
-					<h1
-						className={lexend.className}
-						style={{ fontSize: 50, fontWeight: 800, lineHeight: 1 }}>
-						{lang ? " About me" : "Sobre Mí"}
-					</h1>
-					<p className="text-xl font-medium">
-						{lang
-							? "Read a little about me, I know you'll like it!. ❤️"
-							: "Lee un poco sobre mí, ¡sé que te gustará!. ❤️"}
-					</p>
-					<div className="relative">
-						<span className="absolute w-full h-0.5 bg-white/5"></span>
-						<span className="absolute w-full h-0.5 bg-black/5"></span>
+				<div className="w-full p-7 pr-1 flex">
+					<div
+						className={`${
+							theme
+								? "flex flex-col gap-5 border-r pr-5"
+								: "flex flex-col gap-5 border-r border-blue-400/10 pr-5"
+						}`}>
+						<h1
+							className={lexend.className}
+							style={{ fontSize: 50, fontWeight: 800, lineHeight: 1 }}>
+							{lang ? " About me" : "Sobre Mí"}
+						</h1>
+						<p className="text-xl font-medium">
+							{lang
+								? "Read a little about me, I know you'll like it!. ❤️"
+								: "Lee un poco sobre mí, ¡sé que te gustará!. ❤️"}
+						</p>
+						<p className="text-xl pt-3 font-sans">
+							{lang
+								? "Hi! My name is Sebastian and I like to create things that live on the internet. I am 21 years old and my interest in web development started in 2019, when I decided to study a career that is in the tech industry. It turns out that creating websites is the most fun thing in the world and it taught me a lot about HTML, CSS AND JavaScript."
+								: "Hola! Mi nombre es Sebastián y me gusta crear cosas que viven en internet. Tengo 21 años y mi interes en el desarrollo web comenzó en 2019, cuando decidí estudiar una carrera que está en la industria de la tecnología. Resulta que crear sitios web es lo más divertido del mundo y me enseñó mucho sobre HTML, CSS Y JavaScript."}
+							<br />
+							<br />
+							{lang
+								? "Currently, I'm developing my soft skills and my skills as a developer. Currently, I'm mainly on creating accessible and inclusive digital projects and experiences for other developers like me and to make myself known to companies that want to take advantage of my great knowledge and skills."
+								: "Actualmente, estoy desarrollando mis habilidades blandas y mis aptitudes como desarrollador. Estoy centrado principalmente en crear proyectos y experiencias digitales accesibles e inclusivas para otros desarrolladores como yo y darme a conocer a empresas que quieran aprovechar de mis grandes conocimientos y habilidades."}
+							<br />
+							<br />
+							{lang
+								? "I have also recently launched a web app similar to Spotify, building a web application with the RAPIDAPI API using React and Nextjs. These are some of the technologies I've been working with recently:"
+								: "También he lanzado recientemente una aplicación web similar a Spotify, construyendo una aplicación web con la API RAPIDAPI usando React y Nextjs. Estas son algunas de las tecnologías con las que he estado trabajando recientemente:"}
+							<br />
+						</p>
 					</div>
-					<p className="text-xl pt-3 font-sans">
-						{lang
-							? "Hi! My name is Sebastian and I like to create things that live on the internet. My interest in web development started in 2019, when I decided to study a career that is in the tech industry. It turns out that creating websites is the most fun thing in the world and it taught me a lot about HTML a, CSS Y JavaScript."
-							: "Hola! Mi nombre es Sebastián y me gusta crear cosas que viven en internet. Mi interés en el desarrollo web comenzó en 2019, cuando decidí estudiar una carrera que está en la industria de la tecnología. Resulta que crear sitios web es lo más divertido del mundo y me me enseñó mucho sobre HTML, CSS Y JavaScript."}
-						<br />
-						<br />
-						{lang
-							? "Currently, I'm developing my soft skills and my skills as a developer. Currently, I'm mainly on creating accessible and inclusive digital projects and experiences for other developers like me and to make myself known to companies that want to take advantage of my great knowledge and skills."
-							: "Actualmente, estoy desarrollando mis habilidades blandas y mis aptitudes como desarrollador. Estoy centrado principalmente en crear proyectos y experiencias digitales accesibles e inclusivas para otros desarrolladores como yo y darme a conocer a empresas que quieran aprovechar de mis grandes conocimientos y habilidades."}
-						<br />
-						<br />
-						{lang
-							? "I have also recently launched a web app similar to Spotify, building a web application with the RAPIDAPI API using React and Nextjs. These are some of the technologies I've been working with recently:"
-							: "También he lanzado recientemente una aplicación web similar a Spotify, construyendo una aplicación web con la API RAPIDAPI usando React y Nextjs. Estas son algunas de las tecnologías con las que he estado trabajando recientemente:"}
-						<br />
-					</p>
+
+					<div className="w-full flex flex-col gap-5 justify-center items-center px-3 relative">
+						<a
+							rel="noreferrer"
+							target="_blank"
+							href="https://app.daily.dev/codewithsebas">
+							<div
+								className={`${
+									theme
+										? "absolute w-20 h-20 rounded-full animate-bg bg-blue-500 blur-3xl"
+										: "absolute w-20 h-20 rounded-full animate-bg bg-blue-500/80 blur-3xl"
+								}`}></div>
+
+							<Image
+								src="https://api.daily.dev/devcards/12a7032a5f23401eba6ba8ab08a9f2d7.png?r=okc"
+								width={600}
+								height={600}
+								alt="Sebastian Giraldo's Dev Card"
+							/>
+						</a>
+						<a
+							rel="noreferrer"
+							target="_blank"
+							href="https://app.daily.dev/codewithsebas"
+							className="font-mono">
+							Daily.dev
+						</a>
+					</div>
 				</div>
 
 				<div className="w-full p-5 flex-wrap gap-5">
 					<div className="flex flex-col gap-5">
-						<h1 className="text-3xl leading-none">{lang ? "TECHNOLOGIES" : "TECNOLOGIAS"}</h1>
+						<h1 className="text-3xl leading-none">
+							{lang ? "TECHNOLOGIES" : "TECNOLOGIAS"}
+						</h1>
 						<div className="relative">
 							<span className="absolute w-full h-0.5 bg-white/5"></span>
 							<span className="absolute w-full h-0.5 bg-black/5"></span>

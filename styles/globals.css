@@ -8,14 +8,14 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-html {
+/* html {
   -webkit-tap-highlight-color: transparent;
   -webkit-scrollbar-thumb-background: #282828;
   -webkit-user-select: none;
   -moz-user-select: none;
   -khtml-user-select: none;
   -ms-user-select: none;
-}
+} */
 
 ::-webkit-scrollbar {
   display: none;

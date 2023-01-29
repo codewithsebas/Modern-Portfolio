@@ -27,8 +27,8 @@ const Sidebar = ({
 			}}
 			className={`${
 				theme
-					? "flex flex-col items-center bg-gradient-to-b from-white to-transparent rounded-md duration-200 z-30"
-					: "flex flex-col items-center bg-gradient-to-b from-[#111213] to-transparent rounded-md duration-200 z-30"
+					? "h-full flex flex-col items-center bg-gradient-to-b from-white to-transparent rounded-md duration-200 z-30"
+					: "h-full flex flex-col items-center bg-gradient-to-b from-neutral-900 to-transparent rounded-md duration-200 z-30 "
 			}`}>
 			<div
 				className={`${
@@ -39,8 +39,8 @@ const Sidebar = ({
 				<ul
 					className={`${
 						theme
-							? "flex flex-col items-center gap-5 text-black/50"
-							: "flex flex-col items-center gap-5 text-white/50"
+							? "flex flex-col items-center gap-3 text-black/50"
+							: "flex flex-col items-center gap-3 text-white/50"
 					}`}>
 					{Navbar.map(
 						({ id, href, icon, name, description, nameE, descriptionE }) => (

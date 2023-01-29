@@ -21,67 +21,79 @@ export default function Home({
 			<div
 				className={`${
 					theme
-						? "w-full h-full flex flex-col justify-between overflow-auto bg-gradient-to-b from-[#f6f6f7] to-white rounded-md"
+						? "w-full h-full flex flex-col justify-between overflow-auto bg-gradient-to-b from-[#f6f6f7] to-transparent rounded-md"
 						: "w-full h-full flex flex-col justify-between overflow-auto bg-gradient-to-b from-[#17181a] to-transparent rounded-md"
 				}`}>
 				<div>
 					<div className="relative w-full max-h-80">
-						{theme ? (
-							<Image
-								className="max-h-80 object-cover opacity-90"
-								src="/back.jpg"
-								alt="Banner"
-								width={1076}
-								height={1000}
-								priority
-							/>
-						) : (
-							<Image
-								className="max-h-80 object-cover opacity-10"
-								src="/backDark.jpg"
-								alt="Banner"
-								width={1076}
-								height={1000}
-								priority
-							/>
-						)}
+						<div
+							className={`${
+								theme
+									? "max-h-60 h-60 bg-gradient-to-b from-white to-transparent"
+									: "max-h-60 h-60 bg-gradient-to-b from-neutral-900 to-transparent"
+							}`}></div>
 						<div
 							className={`${
 								theme
 									? "flex flex-col gap-5 items-center justify-center absolute left-0 right-0 bottom-0 top-0  rounded-lg"
 									: "flex flex-col gap-5 items-center justify-center absolute left-0 right-0 bottom-0 top-0  rounded-lg"
 							}`}>
-							<div className="text-7xl text-white font-extrabold">
+							<div
+								className={`${
+									theme
+										? "relative animate-text text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-black via-black/40 to-black"
+										: "relative animate-text text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-white/40 to-white"
+								}`}>
+								<div
+									className={`${
+										theme
+											? "absolute bottom-10 -left-24 w-2 h-2 rounded-full bg-black animate-bubles blur-lg"
+											: "absolute bottom-10 -left-24 w-2 h-2 rounded-full bg-white animate-bubles blur-lg"
+									}`}></div>
+
+								<div
+									className={`${
+										theme
+											? "absolute bottom-20 right-0 w-2 h-2 rounded-full bg-blue-500 animate-bubles2 blur-lg"
+											: "absolute bottom-20 right-0 w-2 h-2 rounded-full bg-blue-500 animate-bubles2 blur-lg"
+									}`}></div>
+
+								<div
+									className={`${
+										theme
+											? "absolute bottom-28 left-10 w-5 h-5 rounded-full bg-yellow-500 animate-bubles3 blur-lg"
+											: "absolute bottom-28 left-10 w-5 h-5 rounded-full bg-yellow-500 animate-bubles3 blur-lg"
+									}`}></div>
+
+								<div
+									className={`${
+										theme
+											? "absolute top-28 right-10 w-5 h-5 rounded-full bg-green-500 animate-bubles4 blur-lg"
+											: "absolute top-28 right-10 w-5 h-5 rounded-full bg-green-500 animate-bubles4 blur-lg"
+									}`}></div>
+
 								<h1 className={lexend.className}>
 									{lang ? "WELCOME!" : "BIENVENIDO!"}
 								</h1>
 							</div>
-							<p className="text-2xl text-white font-sans">
-								{lang ? "To my Modern Portfolio!" : "A mi Portafolio Moderno!"}
-							</p>
 						</div>
 					</div>
 
 					<div className="w-full p-7 flex flex-col gap-5">
-						<p className="font-mono text-xl">
+						<p className="font-mono 2xl:text-xl text-base">
 							{lang ? "Hi, my name is" : "Hola, mi nombre es"}
 						</p>
-						<h1
-							className={lexend.className}
-							style={{ fontSize: 50, lineHeight: 0.5 }}>
+						<h1 className={`${lexend.className} 2xl:text-5xl text-4xl`}>
 							Sebastian Giraldo.
 						</h1>
 						<h1
-							className={lexend.className}
-							style={{ fontSize: 50, lineHeight: 1 }}>
+							className={`${lexend.className} 2xl:text-5xl text-4xl ${
+								theme ? "border-b pb-7" : "border-b border-white/10 pb-7"
+							}`}>
 							{lang
 								? "& I build things for the web.. ❤️"
 								: "Y Construyo cosas para la web.. ❤️"}
 						</h1>
-						<div className="relative">
-							<span className="absolute w-full left-0 right-0 h-0.5 bg-white/5"></span>
-							<span className="absolute w-full left-0 right-0 h-0.5 bg-black/5"></span>
-						</div>
 						<p className="text-xl font-sans">
 							{lang
 								? "As a skilled web developer with experience using React, I have a strong understanding of modern web development technologies and a proven track record of creating high-performing, visually-appealing websites and web applications.  With my experience in React, I am able to create responsive user interfaces and implement complex functionality with the help of component-based architecture. "
