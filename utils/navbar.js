@@ -1,10 +1,9 @@
 import {
 	HiHome,
-	HiColorSwatch,
 	HiBriefcase,
 	HiFolderOpen,
 } from "react-icons/hi";
-import { FaBook, FaAddressBook, FaUsers } from "react-icons/fa";
+import { FaTelegram, FaAddressBook, FaUsers } from "react-icons/fa";
 
 export const Navbar = [
 	{
@@ -22,7 +21,7 @@ export const Navbar = [
 		icon: <FaAddressBook />,
         name: "About",
 		description: "About",
-		nameE: "Sobre",
+		nameE: "Conoceme",
 		descriptionE: "Sobre mi",
 	},
     {
@@ -36,15 +35,6 @@ export const Navbar = [
 	},
     {
 		id: 4,
-		href: "/skills",
-		icon: <HiColorSwatch />,
-        name: "Skills",
-		description: "Skills",
-		nameE: "Habilidades",
-		descriptionE: "Habilidades",
-	},
-    {
-		id: 5,
 		href: "/projects",
 		icon: <HiFolderOpen />,
         name: "Projects",
@@ -53,7 +43,7 @@ export const Navbar = [
 		descriptionE: "Proyectos",
 	},
     {
-		id: 6,
+		id: 5,
 		href: "/networking",
 		icon: <FaUsers />,
         name: "Networking",
@@ -62,9 +52,9 @@ export const Navbar = [
 		descriptionE: "Red",
 	},
     {
-		id: 7,
+		id: 6,
 		href: "/contact",
-		icon: <FaBook />,
+		icon: <FaTelegram />,
         name: "Contact",
 		description: "Contact",
 		nameE: "Contacto",

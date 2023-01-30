@@ -83,13 +83,11 @@ export default function Home({
 						<p className="font-mono 2xl:text-xl text-base">
 							{lang ? "Hi, my name is" : "Hola, mi nombre es"}
 						</p>
-						<h1 className={`${lexend.className} 2xl:text-5xl text-4xl`}>
+						<h1 className={`${lexend.className} 2xl:text-5xl text-5xl`}>
 							Sebastian Giraldo.
 						</h1>
 						<h1
-							className={`${lexend.className} 2xl:text-5xl text-4xl ${
-								theme ? "border-b pb-7" : "border-b border-white/10 pb-7"
-							}`}>
+							className={`${lexend.className} 2xl:text-5xl text-5xl`}>
 							{lang
 								? "& I build things for the web.. ❤️"
 								: "Y Construyo cosas para la web.. ❤️"}
@@ -104,45 +102,6 @@ export default function Home({
 								? "I'm a quick learner and work well under pressure, and I am excited about the opportunity to bring my skills and experience to a new role as a web developer."
 								: "Aprendo rápido y trabajo bien bajo presión, y estoy entusiasmado con la oportunidad de aportar mis habilidades y experiencia a un nuevo rol como desarrollador web."}
 						</p>
-						<div className="w-full flex pt-5">
-							<div className="w-full flex gap-3">
-								<Image
-									className="rounded-md"
-									src="/pc1.jpg"
-									alt="PC1"
-									width={200}
-									height={200}
-								/>
-								<Image
-									className="rounded-md"
-									src="/pc2.jpg"
-									alt="PC2"
-									width={200}
-									height={200}
-								/>
-							</div>
-							<div className="w-full flex flex-col justify-center gap-10">
-								<h1
-									className={lexend.className}
-									style={{ fontSize: 30, lineHeight: 0 }}>
-									{lang ? "My work zone!." : "Mi Zona de trabajo!"}
-								</h1>
-								<p className="text-xl font-sans">
-									{lang
-										? "Experienced specialist committed to providing exceptionalservice."
-										: "Especialista con experiencia comprometido con la prestación de servicios excepcionales"}{" "}
-									<br />
-									<br />
-									{lang
-										? "Motivated, team player with strong organizational andinterpersonal skills."
-										: "Motivado, trabajador en equipo con grandes dotes organizativas e interpersonales."}
-									<br />
-									{lang
-										? "Always looking for new opportunities to improve my skills, get recognized for my knowledge and values and take on additional responsibilities and grow professionally."
-										: "Siempre en busca de nuevas oportunidades para mejorar mis habilidades, obtener reconocimiento por mis conocimientos y valores y asumir responsabilidades adicionales y crecer profesionalmente."}
-								</p>
-							</div>
-						</div>
 					</div>
 				</div>
 

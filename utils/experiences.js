@@ -1,20 +1,5 @@
 export const ExperiencesData = [
 	{
-		puest: "UI/UX DESIGNER",
-		emprise: "Open Bootcamp",
-		country: "España",
-		dateInitial: "Sep 2022",
-		dateFinish: "Oct 2022",
-		description: [
-			"Great experience as UI/UX Designer at Open WeekApps.",
-			"Collaboration of designs for personal projects with a great community",
-		],
-		descriptionE: [
-			"Gran experiencia como Diseñador UI/UX en Open WeekApps.",
-			"Colaboración de diseños para proyectos personales con una gran comunidad.",
-		],
-	},
-	{
 		puest: "FRONTEND DEVELOPER",
 		emprise: "Innova Ingenieria",
 		country: "Colombia",
@@ -29,6 +14,21 @@ export const ExperiencesData = [
 			"Cumplir sistemáticamente mis objetivos a corto y largo plazo.",
 			"Participación proactiva en reuniones orientadas a la creación de nuevas prácticas.Experiencia de alto nivel en React, CSS y HTML.",
 			"Experiencia con HTML, CSS, JavaScript, PHP, MySQL",
+		],
+	},
+	{
+		puest: "UI/UX DESIGNER",
+		emprise: "Open Bootcamp",
+		country: "España",
+		dateInitial: "Sep 2022",
+		dateFinish: "Oct 2022",
+		description: [
+			"Great experience as UI/UX Designer at Open WeekApps.",
+			"Collaboration of designs for personal projects with a great community",
+		],
+		descriptionE: [
+			"Gran experiencia como Diseñador UI/UX en Open WeekApps.",
+			"Colaboración de diseños para proyectos personales con una gran comunidad.",
 		],
 	},
 	{

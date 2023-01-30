@@ -14,6 +14,7 @@ import Copy from "./Copy";
 import Link from "next/link";
 import { InterfaceThemeLanguage } from "@/interfaces/Interface";
 import Cv from "./Cv";
+import Image from "next/image";
 
 export default function Header({
 	theme,
@@ -38,18 +39,18 @@ export default function Header({
 			<div
 				className={`${
 					theme
-						? "bg-white w-full max-w-4xl 2xl:max-w-6xl flex justify-between items-center px-4 py-3 rounded-md"
-						: "bg-neutral-800/20 w-full max-w-4xl 2xl:max-w-6xl flex justify-between items-center px-4 py-3 rounded-md" 
+						? "bg-white w-full max-w-4xl 2xl:max-w-6xl flex justify-between items-center p-3 rounded-md"
+						: "bg-neutral-800/20 w-full max-w-4xl 2xl:max-w-6xl flex justify-between items-center p-3 rounded-md" 
 				}`}>
 				<ul
 					className={`${
 						theme
-							? "flex flex-row items-center gap-6 text-2xl text-black/70"
-							: "flex flex-row items-center gap-6 text-2xl text-white"
+							? "flex flex-row items-center gap-5 text-2xl text-black/70"
+							: "flex flex-row items-center gap-5 text-2xl text-white"
 					}`}>
 					<li className="animate-pulse duration-200 hover:animate-none">
 						<Link href="/" aria-label="Pagina inicial">
-							<AiOutlineFire />
+							{theme ? <Image src="/favicon2.svg" alt="Favicon" width={32} height={32} /> : <Image src="/favicon.svg" alt="Favicon" width={32} height={32} />}
 						</Link>
 					</li>
 					<li>
