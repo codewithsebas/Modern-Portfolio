@@ -4,11 +4,11 @@ import type { AppProps } from "next/app";
 import { useState } from "react";
 
 export default function App({ Component, pageProps }: AppProps) {
-	const [theme, setTheme] = useState(true);
+	const [theme, setTheme] = useState(false);
 	const [lang, setLang] = useState(true);
 	return (
 		<Layout theme={theme} setTheme={setTheme} lang={lang} setLang={setLang}>
-			<Component theme={theme} lang={lang} setTheme={setTheme} {...pageProps} />
+			<Component default="/home" theme={theme} lang={lang} setTheme={setTheme} {...pageProps} />
 		</Layout>
 	);
 }

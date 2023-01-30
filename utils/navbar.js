@@ -1,52 +1,63 @@
 import {
 	HiHome,
-	HiColorSwatch,
 	HiBriefcase,
 	HiFolderOpen,
 } from "react-icons/hi";
-import { FaBook, FaAddressBook, FaUsers } from "react-icons/fa";
+import { FaTelegram, FaAddressBook, FaUsers } from "react-icons/fa";
 
 export const Navbar = [
 	{
 		id: 1,
 		href: "/",
 		icon: <HiHome />,
-        name: "Home"
+        name: "Home",
+		description: "Home",
+		nameE: "Inicio",
+		descriptionE: "Inicio",
 	},
     {
 		id: 2,
 		href: "/about",
 		icon: <FaAddressBook />,
-        name: "About"
+        name: "About",
+		description: "About",
+		nameE: "Conoceme",
+		descriptionE: "Sobre mi",
 	},
     {
 		id: 3,
 		href: "/experience",
 		icon: <HiBriefcase />,
-        name: "Experience"
+        name: "Experience",
+		description: "Experience",
+		nameE: "Experiencia",
+		descriptionE: "Experiencia",
 	},
     {
 		id: 4,
-		href: "/skills",
-		icon: <HiColorSwatch />,
-        name: "Skills"
+		href: "/projects",
+		icon: <HiFolderOpen />,
+        name: "Projects",
+		description: "Projects",
+		nameE: "Proyectos",
+		descriptionE: "Proyectos",
 	},
     {
 		id: 5,
-		href: "/projects",
-		icon: <HiFolderOpen />,
-        name: "Projects"
+		href: "/networking",
+		icon: <FaUsers />,
+        name: "Networking",
+		description: "Networking",
+		nameE: "Red",
+		descriptionE: "Red",
 	},
     {
 		id: 6,
-		href: "/networking",
-		icon: <FaUsers />,
-        name: "Networking"
-	},
-    {
-		id: 7,
 		href: "/contact",
-		icon: <FaBook />,
-        name: "Contact"
+		icon: <FaTelegram />,
+        name: "Contact",
+		description: "Contact",
+		nameE: "Contacto",
+		descriptionE: "Contacto",
 	},
 ];

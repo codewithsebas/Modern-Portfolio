@@ -1,13 +1,15 @@
-import { InterfaceTheme} from "@/interfaces/Interface";
+import { InterfaceThemeLanguage } from "@/interfaces/Interface";
 import { BsFileEarmarkPdfFill, BsFileEarmarkFontFill } from "react-icons/bs";
 
-const Cv = ({ theme }: InterfaceTheme) => {
+const Cv = ({ theme, lang, setLang }: InterfaceThemeLanguage) => {
 	return (
 		<div className="flex gap-1 z-50">
-			<a href="/download/CV.pdf"
+			<a
+				href="/download/Presentation.pdf"
 				target="_blank"
 				rel="noopener noreferrer"
-				download="CV_SebastianGiraldo.pdf" className="flex items-center gap-2 relative group">
+				download="Presentation.pdf"
+				className="flex items-center gap-2 relative group">
 				<BsFileEarmarkFontFill
 					className={`${
 						theme
@@ -23,7 +25,7 @@ const Cv = ({ theme }: InterfaceTheme) => {
 									? "rounded bg-white/90 backdrop-blur-xl text-black/70 p-2 text-sm text-center shadow-lg pointer-events-none"
 									: "rounded bg-white/20 backdrop-blur-xl text-white/70 p-2 text-sm text-center shadow-lg pointer-events-none"
 							}`}>
-							Presentation
+							{lang ? "Presentation" : "Presentación"}
 						</div>
 					</div>
 				</div>
