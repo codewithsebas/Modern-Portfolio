@@ -42,7 +42,7 @@ const Layout = ({
 					<div
 						className={`${
 							theme
-								? "absolute left-10 bottom-20 w-60 h-60 rounded-full animate-bg3 bg-fuchsia-500/30 blur-xl"
+								? "absolute left-10 bottom-20 w-60 h-60 rounded-full animate-bg3 bg-fuchsia-500/20 blur-xl"
 								: "absolute left-10 bottom-20 w-72 h-60 rounded-full animate-bg3 bg-fuchsia-500/10 blur-xl"
 						}`}></div>
 					<div

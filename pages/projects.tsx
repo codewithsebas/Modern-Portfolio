@@ -47,7 +47,7 @@ export default function About({
 						</p>
 					</div>
 
-					<div className="w-full p-7 pt-0 grid grid-cols-1 gap-4">
+					<div className="w-full p-7 pt-0 grid grid-cols-2 gap-4">
 						{ProjectsData.map(
 							({
 								id,
@@ -64,8 +64,8 @@ export default function About({
 									key={id}
 									className={`${
 										theme
-											? "relative w-full rounded-md border p-5 flex flex-col justify-between gap-3 hover:border duration-200 hover:shadow-lg"
-											: "relative w-full rounded-md border border-white/10 p-5 flex flex-col justify-between gap-3 hover:border-white/20 duration-200 hover:shadow-lg hover:shadow-white/5"
+											? "relative w-full rounded-md border p-5 flex flex-col justify-between gap-3 hover:border hover:shadow-lg"
+											: "relative w-full rounded-md border border-white/10 p-5 flex flex-col justify-between gap-3 hover:border-white/20 hover:shadow-lg hover:shadow-white/5"
 									}`}>
 									<div
 										className={`${
@@ -93,14 +93,14 @@ export default function About({
 											<FaGithub className=" text-3xl" />
 										</a>
 									</div>
-									<div className="flex gap-5">
-										<div className="w-3/5 flex flex-col">
+									<div className="flex flex-col gap-5">
+										<div className="w-full h-40 max-h-40 flex flex-col">
 											<h1 className="text-3xl font-semibold">{title}</h1>
 											<p className="font-sans text-base">
-												{lang ? descriptionE : description}
+												{lang ? description : descriptionE}
 											</p>
 										</div>
-										<div className="w-1/2">
+										<div className="w-full flex justify-start">
 											<a href={live} rel="noreferrer" target="_blank">
 												<Image
 													src={example}

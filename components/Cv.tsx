@@ -31,10 +31,10 @@ const Cv = ({ theme, lang, setLang }: InterfaceThemeLanguage) => {
 				</div>
 			</a>
 			<a
-				href="/download/CV.pdf"
+				href="/download/CV_WEB_2023.pdf"
 				target="_blank"
 				rel="noopener noreferrer"
-				download="CV_SebastianGiraldo.pdf"
+				download="CV_WEB_2023.pdf"
 				className="flex items-center gap-2 relative group">
 				<BsFileEarmarkPdfFill
 					className={`${

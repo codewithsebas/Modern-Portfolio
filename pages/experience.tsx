@@ -47,8 +47,8 @@ export default function Experience({
 			<div
 				className={`${
 					theme
-						? "w-full h-full overflow-auto bg-gradient-to-b from-white to-[#f1f7fd] rounded-md duration-200"
-						: "w-full h-full overflow-auto bg-gradient-to-b from-[#17181a] to-transparent rounded-md duration-200"
+						? "w-full h-full overflow-auto bg-gradient-to-b from-white to-transparent rounded-md"
+						: "w-full h-full overflow-auto bg-gradient-to-b from-[#17181a] to-transparent rounded-md"
 				}`}>
 				<div className="relative w-full max-h-80 object-cover">
 					<Image
@@ -70,7 +70,7 @@ export default function Experience({
 
 				<div className="w-full p-7 pt-0 flex flex-wrap gap-10">
 					<div className="flex flex-col gap-5">
-						<p className="text-xl pt-3 font-sans">
+						<div className="text-xl pt-3 font-sans">
 							{lang
 								? "I have 2 years of experience in web and mobile application development using technologies such as HTML, CSS, JavaScript and React. I have worked on projects with multidisciplinary teams and I have always made sure to meet client requirements and deadlines."
 								: "Tengo 2 años de experiencia en desarrollo de aplicaciones web y móviles utilizando tecnologías como HTML, CSS, JavaScript y React. He trabajado en proyectos con equipos multidisciplinares y siempre me he asegurado de cumplir con los requisitos y plazos del cliente."}
@@ -92,14 +92,16 @@ export default function Experience({
 							</p>
 							<br />
 							{lang ? "Thanks for reading. ❤️" : "Gracias por leer. ❤️"}
-						</p>
+						</div>
 					</div>
 
 					<div>
 						<h1
 							className={lexend.className}
 							style={{ fontSize: 30, fontWeight: 800, lineHeight: 1 }}>
-							{lang ? "Some of the great technologies I have knowledge and experience with" : "Algunas de las grandes tecnologias que tengo conocimientos y experiencia"}
+							{lang
+								? "Some of the great technologies I have knowledge and experience with"
+								: "Algunas de las grandes tecnologias que tengo conocimientos y experiencia"}
 						</h1>
 					</div>
 					<div className="flex flex-wrap gap-5 text-4xl">
@@ -119,52 +121,113 @@ export default function Experience({
 						<SiJirasoftware className="cursor-pointer hover:text-blue-300" />
 					</div>
 
-					<div className="flex flex-wrap gap-3">
-						{ExperiencesData.map(
-							(
-								{
-									puest,
-									emprise,
-									country,
-									dateInitial,
-									dateFinish,
-									description,
-									descriptionE,
-								},
-								index
-							) => (
-								<div
-									key={index}
+					<div
+						className={`${
+							theme
+								? "flex flex-col gap-5 border-t pt-7"
+								: "flex flex-col gap-5 border-t border-white/20 pt-7"
+						}`}>
+						<h1
+							className={lexend.className}
+							style={{ fontSize: 50, fontWeight: 800, lineHeight: 1 }}>
+							{lang
+								? "My extensive experience as UI/UX Developer and Designer"
+								: "Mi gran experiencia como Desarrollador y Diseñador UI/UX"}
+						</h1>
+
+						<p className="text-xl font-sans">
+							{lang
+								? "Expert in web development and user experience design, with more than 2 years of experience in creating attractive and efficient websites and applications, using the latest technologies and methodologies in design and development."
+								: "Experto en desarrollo web y diseño de experiencia de usuario, con más de 2 años de experiencia en la creación de sitios web y aplicaciones atractivas y eficientes, utilizando las últimas tecnologías y metodologías en diseño y desarrollo."}
+						</p>
+					</div>
+
+					<div className="flex justify-center items-center">
+						<div className="w-1/4 h-full flex flex-col justify-between items-center relative pt-2 pr-5">
+							<span
+								className={`${
+									theme
+										? "w-0.5 h-full bg-gradient-to-b from-transparent via-black to-transparent  rounded-full absolute"
+										: " w-0.5 h-full bg-gradient-to-b from-transparent via-white to-transparent  rounded-full absolute"
+								}`}></span>
+							{ExperiencesData.map(({ id }) => (
+								<span
+									key={id}
 									className={`${
 										theme
-											? "relative p-5 border border-black/5 rounded-md flex flex-col gap-1 duration-200 hover:border-black/10 hover:shadow-lg"
-											: "relative p-5 border border-white/5 rounded-md flex flex-col gap-1 duration-200 hover:border-white/20 hover:shadow-lg shadow hover:shadow-white/5"
-									}`}>
+											? "w-3 h-3 bg-black rounded-full duration-200 hover:scale-150"
+											: " w-3 h-3 bg-white rounded-full"
+									}`}></span>
+							))}
+						</div>
+						<div className="flex flex-wrap gap-10">
+							{ExperiencesData.map(
+								(
+									{
+										puest,
+										emprise,
+										country,
+										dateInitial,
+										dateFinish,
+										description,
+										descriptionE,
+										tech,
+									},
+									index
+								) => (
+									<div
+										key={index}
+										className={`${theme ? "relative px-1" : "relative px-1"}`}>
 										<div
-										className={`${
-											dateFinish
-												? "absolute w-10 h-10 left-0 rounded-full animate-bg3 bg-amber-200/50 blur-3xl"
-												: "absolute w-10 h-10 left-0 rounded-full animate-bg3 blur-3xl"
-										}`}></div>
-									<h1 className="text-2xl font-black">{puest}</h1>
-									<div className="flex flex-col gap-2">
-										<b className="text-xl">{emprise}</b>
-										<p>
-											{country} | {dateInitial} -{" "}
-											{dateFinish ? dateFinish : "Actualmente"}
-										</p>
+											className={`${
+												dateFinish
+													? "absolute w-10 h-10 left-0 rounded-full animate-bg3 bg-amber-200/50 blur-3xl"
+													: "absolute w-10 h-10 left-0 rounded-full animate-bg3 blur-3xl"
+											}`}></div>
+										<div className="w-full flex flex-col gap-3">
+											<h1 className="text-3xl font-black">{puest}</h1>
+											<div className="flex flex-col gap-1">
+												<b className="text-xl">{emprise}</b>
+												<p>
+													{country} | {dateInitial} -{" "}
+													{dateFinish ? dateFinish : "Actualmente"}
+												</p>
+											</div>
+											<p
+												className={`${
+													theme
+														? "font-sans text-lg text-black/60"
+														: "font-sans text-lg text-white/50"
+												}`}>
+												{lang ? descriptionE : description}
+											</p>
+											<div className="flex flex-col gap-1">
+												<h1 className="text-xl font-black">
+													{lang ? "Technologies" : "Tecnologias"}
+												</h1>
+												<div className="pt-2">
+													<p>
+														<b className="flex gap-2">
+															{tech?.map(({ technology }, index) => (
+																<div
+																key={index}
+																	className={`${
+																		theme
+																			? " bg-white/20 border border-black/30 text-black/80 py-1 px-2 rounded-md cursor-pointer backdrop-blur-3xl hover:border hover:border-black/70"
+																			: " bg-black/20 border border-white/30 text-white py-1 px-2 rounded-md cursor-pointer backdrop-blur-3xl hover:border hover:border-white/100"
+																	}`}>
+																	{technology}
+																</div>
+															))}
+														</b>
+													</p>
+												</div>
+											</div>
+										</div>
 									</div>
-									<p
-										className={`${
-											theme
-												? "font-sans text-lg text-black/50"
-												: "font-sans text-lg text-white/50"
-										}`}>
-										{lang ? description : descriptionE}
-									</p>
-								</div>
-							)
-						)}
+								)
+							)}
+						</div>
 					</div>
 				</div>
 				<Footer

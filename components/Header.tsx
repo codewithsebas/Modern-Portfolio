@@ -40,7 +40,7 @@ export default function Header({
 				className={`${
 					theme
 						? "bg-white w-full max-w-4xl 2xl:max-w-6xl flex justify-between items-center p-3 rounded-md"
-						: "bg-neutral-800/20 w-full max-w-4xl 2xl:max-w-6xl flex justify-between items-center p-3 rounded-md" 
+						: "bg-neutral-800/20 w-full max-w-4xl 2xl:max-w-6xl flex justify-between items-center p-3 rounded-md"
 				}`}>
 				<ul
 					className={`${
@@ -50,7 +50,21 @@ export default function Header({
 					}`}>
 					<li className="animate-pulse duration-200 hover:animate-none">
 						<Link href="/" aria-label="Pagina inicial">
-							{theme ? <Image src="/favicon2.svg" alt="Favicon" width={32} height={32} /> : <Image src="/favicon.svg" alt="Favicon" width={32} height={32} />}
+							{theme ? (
+								<Image
+									src="/favicon2.svg"
+									alt="Favicon"
+									width={32}
+									height={32}
+								/>
+							) : (
+								<Image
+									src="/favicon.svg"
+									alt="Favicon"
+									width={32}
+									height={32}
+								/>
+							)}
 						</Link>
 					</li>
 					<li>
