@@ -25,6 +25,7 @@ export const ExperiencesData = [
       {
         technology: "Typescript",
       },
+      { technology: "Jest" },
       {
         technology: "Node",
       },

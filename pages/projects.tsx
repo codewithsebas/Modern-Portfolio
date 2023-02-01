@@ -49,7 +49,7 @@ export default function About({
             </p>
           </div>
 
-          <div className="w-full p-7 pt-0 grid grid-cols-2 gap-4">
+          <div className="w-full p-7 pt-0 grid grid-cols-1 gap-4">
             {ProjectsData.map(
               ({
                 id,
@@ -99,21 +99,21 @@ export default function About({
                       <FaGithub className=" text-3xl" />
                     </a>
                   </div>
-                  <div className="flex flex-col gap-5">
+                  <div className="flex justify-between gap-5">
                     <div className="w-full h-40 max-h-40 flex flex-col">
                       <h1 className="text-3xl font-semibold">{title}</h1>
                       <p className="font-sans text-base">
                         {lang ? description : descriptionE}
                       </p>
                     </div>
-                    <div className="w-full flex justify-start">
+                    <div className="w-full flex justify-end">
                       <a href={live} rel="noreferrer" target="_blank">
                         <Image
                           src={example}
                           alt={title}
                           width={400}
                           height={400}
-                          className="rounded-md"
+                          className="rounded-md duration-200 hover:scale-95"
                         />
                       </a>
                     </div>

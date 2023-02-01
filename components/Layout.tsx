@@ -37,8 +37,8 @@ const Layout = ({
           <div
             className={`${
               theme
-                ? "absolute right-0 top-20 w-20 h-20 rounded-full animate-bg2 bg-blue-500 blur-3xl"
-                : "absolute right-0 top-20 w-20 h-20 rounded-full animate-bg2 bg-blue-500 blur-3xl"
+                ? "absolute right-14 top-20 w-20 h-20 rounded-full animate-bg2 bg-blue-300 blur-3xl"
+                : "absolute right-14 top-20 w-20 h-20 rounded-full animate-bg2 bg-blue-300 blur-3xl"
             }`}
           ></div>
 

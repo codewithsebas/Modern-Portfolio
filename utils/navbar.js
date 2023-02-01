@@ -1,5 +1,5 @@
 import { HiHome, HiBriefcase, HiFolderOpen } from "react-icons/hi";
-import { FaTelegram, FaAddressBook, FaUsers } from "react-icons/fa";
+import { FaTelegram, FaAddressBook, FaUsers, FaPalette } from "react-icons/fa";
 
 export const Navbar = [
   {
@@ -40,6 +40,15 @@ export const Navbar = [
   },
   {
     id: 5,
+    href: "/design",
+    icon: <FaPalette />,
+    name: "Design",
+    description: "Design",
+    nameE: "Diseños",
+    descriptionE: "Diseños",
+  },
+  {
+    id: 6,
     href: "/networking",
     icon: <FaUsers />,
     name: "Networking",
@@ -48,7 +57,7 @@ export const Navbar = [
     descriptionE: "Red",
   },
   {
-    id: 6,
+    id: 7,
     href: "/contact",
     icon: <FaTelegram />,
     name: "Contact",
