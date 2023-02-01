@@ -8,9 +8,7 @@ const Theme = ({ theme, setTheme }: InterfaceTheme) => {
       <div
         onClick={() => setTheme(!theme)}
         className={`${
-          theme
-            ? "text-black/70 cursor-pointer"
-            : "text-white cursor-pointer"
+          theme ? "text-black/70 cursor-pointer" : "text-white cursor-pointer"
         }`}
       >
         {theme ? <MdNightlight /> : <MdLightMode />}
