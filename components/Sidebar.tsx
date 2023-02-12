@@ -3,7 +3,8 @@ import Theme from "./Theme";
 import Link from "next/link";
 import Language from "./Language";
 import { InterfaceThemePath } from "@/interfaces/Interface";
-import { Navbar } from "../utils/navbar";
+import { SidebarItems } from "../utils/sidebar";
+import Cv from "./Cv";
 
 const Sidebar = ({
   theme,
@@ -15,11 +16,9 @@ const Sidebar = ({
   return (
     <motion.nav
       initial={{
-        x: -100,
         opacity: 0,
       }}
       animate={{
-        x: 0,
         opacity: 1,
       }}
       transition={{
@@ -27,8 +26,8 @@ const Sidebar = ({
       }}
       className={`${
         theme
-          ? "h-full flex flex-col items-center bg-gradient-to-b from-white to-transparent rounded-md duration-200 z-30"
-          : "h-full flex flex-col items-center bg-gradient-to-b from-neutral-900 to-transparent rounded-md duration-200 z-30 "
+          ? "h-full flex flex-col items-center rounded-md duration-200 z-30"
+          : "h-full flex flex-col items-center rounded-md duration-200 z-30 "
       }`}
     >
       <div
@@ -45,7 +44,7 @@ const Sidebar = ({
               : "flex flex-col items-center gap-3 text-white/50"
           }`}
         >
-          {Navbar.map(
+          {SidebarItems.map(
             ({ id, href, icon, name, description, nameE, descriptionE }) => (
               <li
                 key={id}
@@ -57,10 +56,10 @@ const Sidebar = ({
                   className={`${
                     !theme && asPath === href
                       ? "bg-white/10 text-white/90 hover:text-white rounded-md p-2"
-                      : "bg-black/10 text-black/70 hover:text-black/70 rounded-md p-2"
+                      : "bg-black/5 text-black/70 hover:text-black/70 rounded-md p-2"
                       ? asPath !== href
                         ? theme
-                          ? "hover:bg-black/10 hover:text-black/70 rounded-md p-2"
+                          ? "hover:bg-black/5 hover:text-black/70 rounded-md p-2"
                           : "hover:bg-white/10 hover:text-white rounded-md p-2"
                         : "bg-black/10 text-black/70 hover:text-black/70 rounded-md p-2"
                       : "bg-white/10 text-white/70 hover:text-white/80 rounded-md p-2"
@@ -87,6 +86,7 @@ const Sidebar = ({
           )}
         </ul>
         <div className="w-full flex flex-col items-center gap-12">
+          <Cv theme={theme} setTheme={setTheme} lang={lang} setLang={setLang} />
           <div className="w-full cursor-pointer text-2xl group max-w-max relative flex items-center justify-center">
             <Language
               theme={theme}
