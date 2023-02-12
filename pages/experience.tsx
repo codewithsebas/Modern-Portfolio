@@ -47,93 +47,19 @@ export default function Experience({
       <div
         className={`${
           theme
-            ? "w-full h-full overflow-auto bg-gradient-to-b from-white to-transparent rounded-md"
-            : "w-full h-full overflow-auto bg-gradient-to-b from-[#17181a] to-transparent rounded-md"
+            ? "w-full h-full overflow-auto overflow-x-hidden bg-gradient-to-b from-white to-transparent rounded-md"
+            : "w-full h-full overflow-auto overflow-x-hidden bg-transparent rounded-md"
         }`}
       >
-        <div className="relative w-full max-h-80 object-cover">
-          <Image
-            className="w-full max-h-52 object-cover bg-center"
-            src="/about.jpg"
-            alt="Banner"
-            width={1000}
-            height={1000}
-            priority
-          />
-        </div>
-        <div className="w-full p-7 pb-3 flex flex-col gap-5">
-          <h1
-            className={lexend.className}
-            style={{ fontSize: 50, fontWeight: 800, lineHeight: 1 }}
-          >
-            {lang ? "My experience" : "Mi experiencia"}
-          </h1>
-        </div>
-
-        <div className="w-full p-7 pt-0 flex flex-wrap gap-10">
-          <div className="flex flex-col gap-5">
-            <div className="text-xl pt-3 font-sans">
-              {lang
-                ? "I have 2 years of experience in web and mobile application development using technologies such as HTML, CSS, JavaScript and React. I have worked on projects with multidisciplinary teams and I have always made sure to meet client requirements and deadlines."
-                : "Tengo 2 años de experiencia en desarrollo de aplicaciones web y móviles utilizando tecnologías como HTML, CSS, JavaScript y React. He trabajado en proyectos con equipos multidisciplinares y siempre me he asegurado de cumplir con los requisitos y plazos del cliente."}
-              <br />
-              {lang
-                ? "In addition to my technical skills, I am a proactive, hardworking and eager to learn person. I love keeping up with the latest trends in technology and am always looking for new challenges and opportunities to improve my skills. I would love to apply my skills and experience in great companies and contribute to the development of high quality applications."
-                : "Además de mis habilidades técnicas, soy una persona proactiva, trabajadora y con ganas de aprender. Me encanta estar al día de las últimas tendencias en tecnología y siempre estoy buscando nuevos retos y oportunidades para mejorar mis habilidades. Me encantaría aplicar mis habilidades y experiencia en grandes empresas y contribuir al desarrollo de aplicaciones de alta calidad."}
-              <br />
-              <br />
-              <p className="text-xl font-sans">
-                {lang
-                  ? "With my experience in React, I am able to create responsive user interfaces and implement complex functionality with the help of component-based architecture. I'm a quick learner and work well under pressure, and I am excited about the opportunity to bring my skills and experience to a new role as a web developer."
-                  : "Con mi experiencia en React, soy capaz de crear interfaces de usuario responsivas e implementar funcionalidades complejas con la ayuda de la arquitectura basada en componentes. Aprendo rápido y trabajo bien bajo presión, y estoy entusiasmado con la oportunidad de aportar mis habilidades y experiencia a un nuevo papel como desarrollador web."}
-                <br />
-                <br />
-                {lang
-                  ? "Always looking for new opportunities to improve my skills, gain recognition for my knowledge and values and take on additional responsibilities and grow professionally."
-                  : "Siempre en busca de nuevas oportunidades para mejorar mis habilidades, obtener reconocimiento por mis conocimientos y valores y asumir responsabilidades adicionales y crecer profesionalmente."}
-              </p>
-              <br />
-              {lang ? "Thanks for reading. ❤️" : "Gracias por leer. ❤️"}
-            </div>
-          </div>
-
-          <div>
-            <h1
-              className={lexend.className}
-              style={{ fontSize: 30, fontWeight: 800, lineHeight: 1 }}
-            >
-              {lang
-                ? "Some of the great technologies I have knowledge and experience with"
-                : "Algunas de las grandes tecnologias que tengo conocimientos y experiencia"}
-            </h1>
-          </div>
-          <div className="flex flex-wrap gap-5 text-4xl">
-            <FaReact className="cursor-pointer hover:text-blue-300" />
-            <TbBrandNextjs className="cursor-pointer hover:text-slate-300" />
-            <SiJavascript className="cursor-pointer hover:text-yellow-400" />
-            <SiTypescript className="cursor-pointer hover:text-blue-500" />
-            <FaNodeJs className="cursor-pointer hover:text-green-500" />
-            <FaHtml5 className="cursor-pointer hover:text-orange-400" />
-            <FaCss3Alt className="cursor-pointer hover:text-blue-300" />
-            <SiTailwindcss className="cursor-pointer hover:text-blue-300" />
-            <SiMongodb className="cursor-pointer hover:text-green-500" />
-            <SiMysql className="cursor-pointer hover:text-blue-300" />
-            <FaGitAlt className="cursor-pointer hover:text-orange-400" />
-            <FaGithub className="cursor-pointer hover:text-slate-300" />
-            <SiBitbucket className="cursor-pointer hover:text-blue-500" />
-            <SiJirasoftware className="cursor-pointer hover:text-blue-300" />
-          </div>
-
+        <div className="w-full py-5 px-3 flex flex-wrap gap-10">
           <div
             className={`${
-              theme
-                ? "flex flex-col gap-5 border-t pt-7"
-                : "flex flex-col gap-5 border-t border-white/20 pt-7"
+              theme ? "flex flex-col gap-5" : "flex flex-col gap-5"
             }`}
           >
             <h1
               className={lexend.className}
-              style={{ fontSize: 50, fontWeight: 800, lineHeight: 1 }}
+              style={{ fontSize: 38, fontWeight: 800, lineHeight: 1 }}
             >
               {lang
                 ? "My extensive experience as UI/UX Developer and Designer"
@@ -147,8 +73,8 @@ export default function Experience({
             </p>
           </div>
 
-          <div className="flex justify-center items-center">
-            <div className="w-1/4 h-full flex flex-col justify-between items-center relative pt-2 pr-5">
+          <div className="w-full flex justify-center items-center">
+            <div className="w-1/4 h-full md:flex flex-col justify-between items-center relative pt-2 pr-5 hidden">
               <span
                 className={`${
                   theme
@@ -216,22 +142,22 @@ export default function Experience({
                           {lang ? "Technologies" : "Tecnologias"}
                         </h1>
                         <div className="pt-2">
-                          <p>
-                            <b className="flex gap-2">
+                          <div>
+                            <div className="flex flex-wrap gap-2">
                               {tech?.map(({ technology }, index) => (
                                 <div
                                   key={index}
                                   className={`${
                                     theme
-                                      ? " bg-white/20 border border-black/30 text-black/80 py-1 px-2 rounded-md cursor-pointer backdrop-blur-3xl hover:border hover:border-black/70"
-                                      : " bg-black/20 border border-white/30 text-white py-1 px-2 rounded-md cursor-pointer backdrop-blur-3xl hover:border hover:border-white/100"
+                                      ? " bg-white/20 border border-black/30 text-black/80 py-1 px-2 rounded-md cursor-pointer hover:border hover:border-black/70"
+                                      : " bg-black/20 border border-white/30 text-white py-1 px-2 rounded-md cursor-pointer hover:border hover:border-white/100"
                                   }`}
                                 >
                                   {technology}
                                 </div>
                               ))}
-                            </b>
-                          </p>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -239,6 +165,32 @@ export default function Experience({
                 )
               )}
             </div>
+          </div>
+          <div>
+            <h1
+              className={lexend.className}
+              style={{ fontSize: 25, fontWeight: 800, lineHeight: 1.2 }}
+            >
+              {lang
+                ? "Some of the great technologies I have knowledge and experience with"
+                : "Algunas de las grandes tecnologias que tengo conocimientos y experiencia"}
+            </h1>
+          </div>
+          <div className="flex flex-wrap gap-4 text-4xl">
+            <FaReact className="cursor-pointer hover:text-blue-300" />
+            <TbBrandNextjs className="cursor-pointer hover:text-slate-300" />
+            <SiJavascript className="cursor-pointer hover:text-yellow-400" />
+            <SiTypescript className="cursor-pointer hover:text-blue-500" />
+            <FaNodeJs className="cursor-pointer hover:text-green-500" />
+            <FaHtml5 className="cursor-pointer hover:text-orange-400" />
+            <FaCss3Alt className="cursor-pointer hover:text-blue-300" />
+            <SiTailwindcss className="cursor-pointer hover:text-blue-300" />
+            <SiMongodb className="cursor-pointer hover:text-green-500" />
+            <SiMysql className="cursor-pointer hover:text-blue-300" />
+            <FaGitAlt className="cursor-pointer hover:text-orange-400" />
+            <FaGithub className="cursor-pointer hover:text-slate-300" />
+            <SiBitbucket className="cursor-pointer hover:text-blue-500" />
+            <SiJirasoftware className="cursor-pointer hover:text-blue-300" />
           </div>
         </div>
         <Footer

@@ -2,25 +2,6 @@ import { Lexend } from "@next/font/google";
 import Head from "next/head";
 import Image from "next/image";
 import React from "react";
-
-import {
-  FaReact,
-  FaNodeJs,
-  FaHtml5,
-  FaCss3Alt,
-  FaGitAlt,
-  FaGithub,
-} from "react-icons/fa";
-import { TbBrandNextjs } from "react-icons/tb";
-import {
-  SiJavascript,
-  SiTypescript,
-  SiMongodb,
-  SiMysql,
-  SiTailwindcss,
-  SiBitbucket,
-  SiJirasoftware,
-} from "react-icons/si";
 import Footer from "@/components/Footer";
 import { InterfaceThemeLanguage } from "@/interfaces/Interface";
 
@@ -48,16 +29,6 @@ export default function About({
             : "w-full h-full flex flex-col justify-between overflow-auto bg-transparent backdrop-blur-3xl"
         }`}
       >
-        {/* <div className="relative w-full max-h-80">
-          <Image
-            className="w-full max-h-52 object-cover"
-            src="/experience.jpg"
-            alt="Banner"
-            width={1000}
-            height={1000}
-            priority
-          />
-        </div> */}
         <div className="w-full py-5 px-3 flex-row lg:flex lg:justify-center lg:items-center">
           <div
             className={`${
