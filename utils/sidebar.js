@@ -17,7 +17,7 @@ export const SidebarItems = [
     icon: <FaAddressBook />,
     name: "About",
     description: "About",
-    nameE: "Conoceme",
+    nameE: "Sobre mí",
     descriptionE: "Sobre mi",
   },
   {
@@ -42,9 +42,9 @@ export const SidebarItems = [
     id: 5,
     href: "/design",
     icon: <FaPalette />,
-    name: "Design",
+    name: "UI/UX Designer",
     description: "Design",
-    nameE: "Diseños",
+    nameE: "Diseños UI/UX",
     descriptionE: "Diseños",
   },
 ];

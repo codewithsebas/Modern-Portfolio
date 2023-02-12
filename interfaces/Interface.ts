@@ -17,6 +17,7 @@ export interface InterfaceThemePath {
 export interface InterfaceTheme {
   theme: boolean;
   setTheme: React.Dispatch<React.SetStateAction<boolean>>;
+  lang: boolean;
 }
 
 export interface Copy {
