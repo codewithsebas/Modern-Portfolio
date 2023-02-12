@@ -2,7 +2,8 @@ export const ProjectsData = [
   {
     id: 1,
     title: "Real State",
-    example: "https://res.cloudinary.com/dovavvnjx/image/upload/v1673320050/Captura_de_pantalla_2023-01-09_220535_dshabw.png",
+    example:
+      "https://res.cloudinary.com/dovavvnjx/image/upload/v1673320050/Captura_de_pantalla_2023-01-09_220535_dshabw.png",
     repo: "https://github.com/codewithsebas/Project-Real-State",
     live: "https://project-real-state-beige.vercel.app/",
     techs: ["React ", "Chakra ", "RAPIDAPI"],
@@ -11,7 +12,8 @@ export const ProjectsData = [
   {
     id: 2,
     title: "Linktree Clone",
-    example: "https://res.cloudinary.com/dovavvnjx/image/upload/v1673716764/Captura_de_pantalla_2023-01-14_121548_bbgs0a.png",
+    example:
+      "https://res.cloudinary.com/dovavvnjx/image/upload/v1673716764/Captura_de_pantalla_2023-01-14_121548_bbgs0a.png",
     repo: "https://github.com/codewithsebas/Project-Linktree-Clone",
     live: "https://project-linktree-clone.vercel.app/",
     techs: ["Next ", "CSS "],
@@ -20,7 +22,8 @@ export const ProjectsData = [
   {
     id: 3,
     title: "Rick And Morty",
-    example: "https://res.cloudinary.com/dovavvnjx/image/upload/v1673745546/Captura_de_pantalla_2023-01-14_201840_ghu9qi.png",
+    example:
+      "https://res.cloudinary.com/dovavvnjx/image/upload/v1673745546/Captura_de_pantalla_2023-01-14_201840_ghu9qi.png",
     repo: "https://github.com/codewithsebas/Project-Rick-And-Morty",
     live: "https://rick-and-morty-six-eta.vercel.app/",
     techs: ["React ", "Boostrap ", "rickandmortyapi"],
@@ -30,7 +33,8 @@ export const ProjectsData = [
   {
     id: 4,
     title: "Facebook App",
-    example: "https://res.cloudinary.com/dovavvnjx/image/upload/v1676183351/f_xfboge.png",
+    example:
+      "https://res.cloudinary.com/dovavvnjx/image/upload/v1676183351/f_xfboge.png",
     repo: "https://github.com/codewithsebas/Project-Real-State",
     live: "https://facebook-app-three.vercel.app/",
     techs: ["Next ", "Tailwind "],

@@ -54,7 +54,9 @@ export default function About({
               ({ id, title, example, repo, live, techs, animation }) => (
                 <div
                   key={id}
-                  className={`relative w-full rounded-md flex flex-col justify-between gap-5 ${theme ? 'bg-[#11101004]' : 'bg-[#1110103b]'}`}
+                  className={`relative w-full rounded-md flex flex-col justify-between gap-5 ${
+                    theme ? "bg-[#11101004]" : "bg-[#1110103b]"
+                  }`}
                 >
                   <div className="flex justify-between items-center z-20 px-3 pt-3">
                     <GoFileSubmodule className=" text-3xl" />

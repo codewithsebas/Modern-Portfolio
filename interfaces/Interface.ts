@@ -32,6 +32,6 @@ export interface InterfaceThemeLanguage {
 }
 
 export interface TooltipInterface {
-  title: string
-  theme: boolean
+  title: string;
+  theme: boolean;
 }
