@@ -7,43 +7,13 @@ import {
   FaMailchimp,
 } from "react-icons/fa";
 import { SiDuolingo } from "react-icons/si";
-import { AiOutlineFire } from "react-icons/ai";
-
-import { motion } from "framer-motion";
 import Copy from "./Copy";
-import Link from "next/link";
 import { InterfaceThemeLanguage } from "@/interfaces/Interface";
-import Cv from "./Cv";
-import Image from "next/image";
 
-export default function Header({
-  theme,
-  setTheme,
-  lang,
-  setLang,
-}: InterfaceThemeLanguage) {
+export default function Header({ theme }: InterfaceThemeLanguage) {
   return (
-    <motion.header
-      initial={{
-        y: -100,
-        opacity: 0,
-      }}
-      animate={{
-        y: 0,
-        opacity: 1,
-      }}
-      transition={{
-        duration: 1,
-      }}
-      className="w-full flex justify-center items-center pt-3 px-3 pb-2 fixed "
-    >
-      <div
-        className={`${
-          theme
-            ? "bg-white w-full max-w-4xl 2xl:max-w-6xl flex justify-between items-center p-3 rounded-md"
-            : "bg-neutral-800/20 w-full max-w-4xl 2xl:max-w-6xl flex justify-between items-center p-3 rounded-md"
-        }`}
-      >
+    <header className="w-full flex justify-center items-center pt-3 px-3 pb-2">
+      <div className="w-full max-w-4xl 2xl:max-w-6xl md:flex-row flex flex-col gap-7 justify-between items-start p-3 rounded-md">
         <ul
           className={`${
             theme
@@ -51,25 +21,6 @@ export default function Header({
               : "flex flex-row items-center gap-5 text-2xl text-white"
           }`}
         >
-          <li className="animate-pulse duration-200 hover:animate-none">
-            <Link href="/" aria-label="Pagina inicial">
-              {theme ? (
-                <Image
-                  src="/favicon2.svg"
-                  alt="Favicon"
-                  width={32}
-                  height={32}
-                />
-              ) : (
-                <Image
-                  src="/favicon.svg"
-                  alt="Favicon"
-                  width={32}
-                  height={32}
-                />
-              )}
-            </Link>
-          </li>
           <li>
             <a
               aria-label="LinkedIn"
@@ -178,10 +129,8 @@ export default function Header({
             <FaMailchimp className="text-2xl" />
             <Copy value="joabgiraldo@gmail.com" />
           </div>
-          <p className={`${theme ? "text-black" : "text-white"}`}>|</p>
-          <Cv theme={theme} setTheme={setTheme} lang={lang} setLang={setLang} />
         </div>
       </div>
-    </motion.header>
+    </header>
   );
 }

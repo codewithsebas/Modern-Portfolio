@@ -3,12 +3,14 @@ import Footer from "@/components/Footer";
 import { InterfaceThemeLanguage } from "@/interfaces/Interface";
 import { Lexend } from "@next/font/google";
 import Image from "next/image";
+import Header from "@/components/Header";
 const lexend = Lexend({ subsets: ["latin"], weight: "800" });
 
 export default function Home({
   theme,
   setTheme,
   lang,
+  setLang,
 }: InterfaceThemeLanguage) {
   return (
     <>
@@ -21,19 +23,13 @@ export default function Home({
       <div
         className={`${
           theme
-            ? "w-full h-full flex flex-col justify-between overflow-auto bg-gradient-to-b from-[#f6f6f7] to-transparent rounded-md"
-            : "w-full h-full flex flex-col justify-between overflow-auto bg-gradient-to-b from-[#17181a] to-transparent rounded-md"
+            ? "w-full h-full flex flex-col justify-between overflow-auto rounded-md text-center"
+            : "w-full h-full flex flex-col justify-between overflow-auto rounded-md text-center"
         }`}
       >
         <div>
           <div className="relative w-full max-h-80">
-            <div
-              className={`${
-                theme
-                  ? "max-h-60 h-60 bg-gradient-to-b from-white to-transparent"
-                  : "max-h-60 h-60 bg-gradient-to-b from-neutral-900 to-transparent"
-              }`}
-            ></div>
+            <div className={`${theme ? "h-full" : "h-full"}`}></div>
             <div
               className={`${
                 theme
@@ -80,26 +76,30 @@ export default function Home({
                   }`}
                 ></div>
 
-                <h1 className={lexend.className}>
+                {/* <h1 className={lexend.className}>
                   {lang ? "WELCOME!" : "BIENVENIDO!"}
-                </h1>
+                </h1> */}
               </div>
             </div>
           </div>
 
-          <div className="w-full p-7 flex flex-col gap-5">
+          <div className="w-full py-5 px-3 flex flex-col justify-start items-start gap-5">
             <p className="font-mono 2xl:text-xl text-base">
               {lang ? "Hi, my name is" : "Hola, mi nombre es"}
             </p>
-            <h1 className={`${lexend.className} 2xl:text-5xl text-5xl`}>
+            <h1
+              className={`${lexend.className} 2xl:text-5xl text-5xl text-left`}
+            >
               Sebastian Giraldo.
             </h1>
-            <h1 className={`${lexend.className} 2xl:text-5xl text-5xl`}>
+            <h1
+              className={`${lexend.className} 2xl:text-5xl text-5xl text-left`}
+            >
               {lang
                 ? "& I build things for the web.. ❤️"
                 : "Y Construyo cosas para la web.. ❤️"}
             </h1>
-            <p className="text-xl font-sans">
+            <p className="text-xl font-sans text-left">
               {lang
                 ? "As a skilled web developer with experience using React, I have a strong understanding of modern web development technologies and a proven track record of creating high-performing, visually-appealing websites and web applications.  With my experience in React, I am able to create responsive user interfaces and implement complex functionality with the help of component-based architecture. "
                 : "Como desarrollador web experto con experiencia en el uso de React, tengo una sólida comprensión de las tecnologías de desarrollo web modernas y un historial probado de creación de sitios web y aplicaciones web de alto rendimiento y visualmente atractivos.  Con mi experiencia en React, soy capaz de crear interfaces de usuario responsivas e implementar funcionalidades complejas con la ayuda de la arquitectura basada en componentes. "}
@@ -110,6 +110,12 @@ export default function Home({
                 : "Aprendo rápido y trabajo bien bajo presión, y estoy entusiasmado con la oportunidad de aportar mis habilidades y experiencia a un nuevo rol como desarrollador web."}
             </p>
           </div>
+          <Header
+            theme={theme}
+            setTheme={setTheme}
+            lang={lang}
+            setLang={setLang}
+          />
         </div>
 
         <Footer
