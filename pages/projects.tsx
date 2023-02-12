@@ -31,16 +31,16 @@ export default function About({
         className={`${
           theme
             ? "w-full h-full flex flex-col justify-between overflow-auto bg-gradient-to-b from-white to-transparent rounded-md backdrop-blur-3xl"
-            : "w-full h-full flex flex-col justify-between overflow-auto bg-gradient-to-b from-[#17181a] to-transparent rounded-md backdrop-blur-3xl"
+            : "w-full h-full flex flex-col justify-between overflow-auto bg-transparent rounded-md backdrop-blur-3xl"
         }`}
       >
         <div>
-          <div className="w-full p-7 flex flex-col  gap-5">
+          <div className="w-full py-5 px-3 flex flex-col  gap-5">
             <h1
               className={lexend.className}
               style={{ fontSize: 50, fontWeight: 800, lineHeight: 1 }}
             >
-              {lang ? "My Projects" : "Mis Proyectos"}
+              {lang ? "Projects" : "Proyectos"}
             </h1>
             <p className="text-xl font-sans">
               {lang
@@ -49,77 +49,38 @@ export default function About({
             </p>
           </div>
 
-          <div className="w-full p-7 pt-0 grid grid-cols-1 gap-4">
+          <div className="w-full py-5 pl-3 pr-5 pt-0 grid grid-cols-1 gap-4">
             {ProjectsData.map(
-              ({
-                id,
-                title,
-                description,
-                descriptionE,
-                example,
-                repo,
-                live,
-                techs,
-                animation,
-              }) => (
+              ({ id, title, example, repo, live, techs, animation }) => (
                 <div
                   key={id}
-                  className={`${
-                    theme
-                      ? "relative w-full rounded-md border p-5 flex flex-col justify-between gap-3 hover:border hover:shadow-lg"
-                      : "relative w-full rounded-md border border-white/10 p-5 flex flex-col justify-between gap-3 hover:border-white/20 hover:shadow-lg hover:shadow-white/5"
-                  }`}
+                  className={`relative w-full rounded-md flex flex-col justify-between gap-5 ${theme ? 'bg-[#11101004]' : 'bg-[#1110103b]'}`}
                 >
-                  <div
-                    className={`${
-                      animation
-                        ? "absolute w-20 h-20 right-0 rounded-full animate-bg bg-sky-500 blur-3xl"
-                        : "absolute w-20 h-20 right-0 rounded-full animate-bg blur-3xl"
-                    }`}
-                  ></div>
-
-                  <div
-                    className={`${
-                      theme
-                        ? "absolute bottom-10 -left-24 w-2 h-2 rounded-full bg-black blur-lg"
-                        : "absolute bottom-10 -left-24 w-2 h-2 rounded-full bg-white blur-lg"
-                    }`}
-                  ></div>
-
-                  <div
-                    className={`${
-                      theme
-                        ? "absolute bottom-20 right-0 w-2 h-2 rounded-full bg-blue-500 blur-lg"
-                        : "absolute bottom-20 right-0 w-2 h-2 rounded-full bg-blue-500 blur-lg"
-                    }`}
-                  ></div>
-                  <div className="flex justify-between items-center z-20">
-                    <GoFileSubmodule className=" text-4xl" />
+                  <div className="flex justify-between items-center z-20 px-3 pt-3">
+                    <GoFileSubmodule className=" text-3xl" />
                     <a href={repo} rel="noreferrer" target="_blank">
-                      <FaGithub className=" text-3xl" />
+                      <FaGithub className=" text-2xl" />
                     </a>
                   </div>
-                  <div className="flex justify-between gap-5">
-                    <div className="w-full h-40 max-h-40 flex flex-col">
+                  <div className="flex flex-col justify-between gap-5">
+                    <div className="w-full flex flex-col px-3">
                       <h1 className="text-3xl font-semibold">{title}</h1>
-                      <p className="font-sans text-base">
-                        {lang ? description : descriptionE}
-                      </p>
                     </div>
-                    <div className="w-full flex justify-end">
+                    <div className="w-full px-3">
                       <a href={live} rel="noreferrer" target="_blank">
                         <Image
+                          className="rounded-md"
                           src={example}
+                          width={2000}
+                          height={2000}
+                          priority
                           alt={title}
-                          width={400}
-                          height={400}
-                          className="rounded-md duration-200 hover:scale-95"
                         />
                       </a>
                     </div>
                   </div>
 
-                  <div className="flex justify-between items-center">
+                  <div className="flex justify-between items-center px-3 pb-3">
                     <p className="font-semibold flex gap-3">{techs}</p>
                     <div className="flex gap-2 items-center">
                       <a href={live} rel="noreferrer" target="_blank">
