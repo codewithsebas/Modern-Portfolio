@@ -3,15 +3,15 @@ import { Lexend } from "@next/font/google";
 import { BsPaypal } from "react-icons/bs";
 import { SiKofi } from "react-icons/si";
 
-const font = Lexend({ subsets: ["latin"], weight: "800" });
+const font = Lexend({ subsets: ["latin"], weight: "300" });
 
-const Footer = ({ theme, setTheme, lang }: InterfaceThemeLanguage) => {
+const Footer = ({ theme }: InterfaceThemeLanguage) => {
   return (
     <footer
       className={`${
         theme
-          ? "flex justify-center gap-2 rounded-b-md text-black py-1"
-          : "flex justify-center gap-2 rounded-b-md text-white py-1"
+          ? "flex justify-center gap-2 rounded-b-md text-black py-3"
+          : "flex justify-center gap-2 rounded-b-md text-white py-3"
       }`}
     >
       <div
@@ -28,7 +28,7 @@ const Footer = ({ theme, setTheme, lang }: InterfaceThemeLanguage) => {
           target="_blank"
           className={font.className}
         >
-          By Sebatian Giraldo
+          Sebatian Giraldo
         </a>
         <a
           aria-label="Ko Fi"
