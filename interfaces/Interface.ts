@@ -29,3 +29,8 @@ export interface InterfaceThemeLanguage {
   lang: boolean;
   setLang: React.Dispatch<React.SetStateAction<boolean>>;
 }
+
+export interface TooltipInterface {
+  title: string
+  theme: boolean
+}
