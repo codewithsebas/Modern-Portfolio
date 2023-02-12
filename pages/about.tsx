@@ -44,11 +44,11 @@ export default function About({
       <div
         className={`${
           theme
-            ? "w-full h-full overflow-auto bg-gradient-to-b from-white to-transparent rounded-md backdrop-blur-3xl"
-            : "w-full h-full overflow-auto bg-gradient-to-b from-[#17181a] to-transparent rounded-md backdrop-blur-3xl"
+            ? "w-full h-full flex flex-col justify-between overflow-auto bg-gradient-to-b from-white to-transparent rounded-md backdrop-blur-3xl"
+            : "w-full h-full flex flex-col justify-between overflow-auto bg-transparent backdrop-blur-3xl"
         }`}
       >
-        <div className="relative w-full max-h-80">
+        {/* <div className="relative w-full max-h-80">
           <Image
             className="w-full max-h-52 object-cover"
             src="/experience.jpg"
@@ -57,13 +57,11 @@ export default function About({
             height={1000}
             priority
           />
-        </div>
-        <div className="w-full p-7 pr-1 flex">
+        </div> */}
+        <div className="w-full py-5 px-3 flex-row lg:flex lg:justify-center lg:items-center">
           <div
             className={`${
-              theme
-                ? "flex flex-col gap-5 border-r pr-5"
-                : "flex flex-col gap-5 border-r border-blue-400/10 pr-5"
+              theme ? "flex flex-col gap-5 pr-5" : "flex flex-col gap-5 pr-5"
             }`}
           >
             <h1
@@ -104,12 +102,14 @@ export default function About({
                 }`}
               ></div>
 
-              <Image
-                src="https://api.daily.dev/devcards/12a7032a5f23401eba6ba8ab08a9f2d7.png?r=okc"
-                width={600}
-                height={600}
-                alt="Sebastian Giraldo's Dev Card"
-              />
+              <div className="w-60 h-full lg:pt-0 pt-5">
+                <Image
+                  src="https://api.daily.dev/devcards/12a7032a5f23401eba6ba8ab08a9f2d7.png?r=okc"
+                  width={600}
+                  height={600}
+                  alt="Sebastian Giraldo's Dev Card"
+                />
+              </div>
             </a>
             <a
               rel="noreferrer"
@@ -119,45 +119,6 @@ export default function About({
             >
               Daily.dev
             </a>
-          </div>
-        </div>
-
-        <div className="w-full p-7 pr-1 flex pt-10">
-          <div
-            className={`${
-              theme
-                ? "flex flex-col gap-5 border-r pr-5"
-                : "flex flex-col gap-5 border-r border-blue-400/10 pr-5"
-            }`}
-          >
-            <h1
-              className={lexend.className}
-              style={{ fontSize: 50, fontWeight: 800, lineHeight: 1 }}
-            >
-              {lang ? "About this site web" : "Acerca de este sitio web"}
-            </h1>
-            <p className="text-xl font-medium">
-              {lang
-                ? "Read a little about my site and how I managed to make it!, I know you will like it! ❤️"
-                : "Lee un poco sobre mí pagina y en como logre hacerla!, ¡sé que te gustará!. ❤️"}
-            </p>
-            <p className="text-xl pt-3 font-sans">
-              {lang
-                ? "Welcome to my home on the internet. This site functions as a blog/portfolio, a place to share code and thoughts. Opinions are my own."
-                : "Bienvenido a mi casa en Internet. Este sitio funciona como un blog/portafolio, un lugar donde compartir código y pensamientos. Las opiniones son mías."}
-              <br />
-              <br />
-              {lang
-                ? "I learnt how to build this site from the most awesome people in the community:"
-                : "Aprendí a construir este sitio de las personas más increíbles de la comunidad:"}
-              <br />
-              <b>
-                {lang
-                  ? "With Next.js and Tailwind CSS: Template starter where I bootstrapped the project."
-                  : "Con Next.js y CSS de Tailwind: Plantilla de inicio donde arranqué el proyecto."}
-              </b>
-              <br />
-            </p>
           </div>
         </div>
 

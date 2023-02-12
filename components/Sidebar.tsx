@@ -33,8 +33,8 @@ const Sidebar = ({
       <div
         className={`${
           theme
-            ? "h-full flex flex-col justify-between items-center rounded-md px-2 pt-2 pb-5"
-            : "h-full flex flex-col justify-between items-center rounded-md px-2 pt-2 pb-5"
+            ? "h-full flex flex-col justify-between items-center rounded-md px-2 pt-5 pb-5"
+            : "h-full flex flex-col justify-between items-center rounded-md px-2 pt-5 pb-5"
         }`}
       >
         <ul
